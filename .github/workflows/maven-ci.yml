@@ -1,0 +1,52 @@
+name: Java CI con Maven
+
+on:
+  push:
+    # Si avvia su push per feedback immediato E dopo un merge nei branch principali
+    branches: 
+      - main
+      - develop
+      - lucagen  
+      - prototype
+  pull_request:
+    types: [opened, synchronize, reopened]
+    # Si avvia solo quando si cerca di unire il codice in questi branch
+    branches: 
+      - main
+      - develop
+      - prototype
+      - lucagen
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del codice
+      uses: actions/checkout@v4
+
+    - name: Setup Java 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        cache: 'maven' 
+
+    - name: Build, Test ed Esecuzione LoginServletTest
+      # Questo comando esegue il build e i 7 test che hai trovato
+      run: mvn -B clean package --file pom.xml 
+
+    - name: Upload del JAR/WAR di Build (Artefatto)
+      uses: actions/upload-artifact@v4
+      with:
+        name: uni-class-build
+        # Verifica questo path. Adattalo se necessario (es. solo target/*.jar)
+        path: target/UniClass-Dependability.war
+
+    - name: Upload Report Coverage (JaCoCo)
+      uses: actions/upload-artifact@v4
+      if: always() # Esegui anche se i test falliscono
+      with:
+        name: coverage-report
+        path: target/site/jacoco/
+        retention-days: 1

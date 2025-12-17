@@ -1,0 +1,48 @@
+name: Generate and Commit PDF
+
+on:
+  workflow_dispatch:   
+  push:
+    paths:
+      - 'Report/md-thesis/**.md'
+      - 'Report/md-thesis/**.yaml'
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc and TeX dependencies
+        run: |
+          sudo apt-get update
+          # Accetta automaticamente la licenza EULA per i font Microsoft
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
+          # Installa tutto: i pacchetti di prima + xetex + i font
+          sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-xetex ttf-mscorefonts-installer  
+      - name: Generate PDF
+        run: |
+          cd Report/md-thesis
+          mkdir -p output
+          pandoc main.md -o output/UniClass_Report.pdf --from markdown --pdf-engine=xelatex --metadata-file=metadata.yaml
+
+      - name: Commit and push generated PDF
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add Report/md-thesis/output/UniClass_Report.pdf
+          git commit -m "Auto-generate UniClass_Report.pdf [skip ci]" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload PDF as Artifact (optional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: UniClass_Report
+          path: Report/md-thesis/output/UniClass_Report.pdf
