@@ -15,7 +15,6 @@ public class MockCoordinatoreDAO implements CoordinatoreRemote {
     public void add(Coordinatore c, String corsoLaurea) {
         byEmail.put(c.getEmail(), c);
         byMatricola.put(c.getMatricola(), c);
-
         byCorso.computeIfAbsent(corsoLaurea, k -> new ArrayList<>()).add(c);
     }
 
@@ -40,12 +39,16 @@ public class MockCoordinatoreDAO implements CoordinatoreRemote {
     }
 
     @Override
-    public void aggiungiCoordinatore(Coordinatore c) { }
+    public void aggiungiCoordinatore(Coordinatore c) {
+        // Metodo intenzionalmente vuoto: nel mock non è richiesta alcuna implementazione.
+    }
 
     @Override
-    public void rimuoviCoordinatore(Coordinatore c) { }
+    public void rimuoviCoordinatore(Coordinatore c) {
+        // Metodo intenzionalmente vuoto: nel mock non è richiesta alcuna implementazione.
+    }
 
     public void setCoordinatoreDaRitornare(Coordinatore c) {
-        this.coordinatoreDaRitornare=c;
+        this.coordinatoreDaRitornare = c;
     }
 }

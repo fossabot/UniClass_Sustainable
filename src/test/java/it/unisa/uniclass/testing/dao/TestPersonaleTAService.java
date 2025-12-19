@@ -7,7 +7,9 @@ import it.unisa.uniclass.utenti.service.dao.PersonaleTARemote;
 public class TestPersonaleTAService extends PersonaleTAService {
     private PersonaleTARemote personaleTADao;
 
-    public TestPersonaleTAService() {}
+    public TestPersonaleTAService() {
+        // Costruttore intenzionalmente vuoto: nei test non è richiesta alcuna inizializzazione.
+    }
 
     public void setPersonaleTADao(PersonaleTARemote personaleTADao) {
         this.personaleTADao = personaleTADao;

@@ -113,7 +113,7 @@ class ChatServletTest {
         verify(request).setAttribute(eq("accademico"), eq(altro));
         verify(request).setAttribute(eq("messaggiInviati"), any(List.class));
         verify(request).setAttribute(eq("messaggiRicevuti"), any(List.class));
-        verify(request).setAttribute(eq("accdemicoSelf"), eq(self));
+        verify(request).setAttribute(eq("accademicoSelf"), eq(self));
 
         // 2. Verifichiamo che gli attributi siano stati settati nella Session
         verify(session).setAttribute(eq("messaggigi"), any(List.class));

@@ -14,10 +14,12 @@ public class MockPersonaleTADAO implements PersonaleTARemote {
     public void add(PersonaleTA p) {
         byEmail.put(p.getEmail(), p);
     }
+
     // Questo metodo deve essere visibile
     public void setPersonaleDaRitornare(PersonaleTA p) {
         this.personaleDaRitornare = p;
     }
+
     public void clear() {
         byEmail.clear();
     }
@@ -38,6 +40,7 @@ public class MockPersonaleTADAO implements PersonaleTARemote {
 
     @Override
     public PersonaleTA trovaPersonale(long id) {
+        // Metodo intenzionalmente vuoto: nel mock non è richiesta alcuna implementazione.
         return null;
     }
 
@@ -47,8 +50,12 @@ public class MockPersonaleTADAO implements PersonaleTARemote {
     }
 
     @Override
-    public void aggiungiPersonale(PersonaleTA p) { }
+    public void aggiungiPersonale(PersonaleTA p) {
+        // Metodo intenzionalmente vuoto: nel mock non è richiesta alcuna implementazione.
+    }
 
     @Override
-    public void rimuoviPersonale(PersonaleTA p) { }
+    public void rimuoviPersonale(PersonaleTA p) {
+        // Metodo intenzionalmente vuoto: nel mock non è richiesta alcuna implementazione.
+    }
 }

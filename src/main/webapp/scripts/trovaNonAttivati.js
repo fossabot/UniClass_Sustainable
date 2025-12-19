@@ -1,33 +1,27 @@
-
 function aggiornaListaUtenti() {
-    var contextPath = window.location.pathname.substring(0, window.location.pathname.indexOf("/", 1));
-    var url = contextPath + "/GetNonAttivati";
-    var url2 = contextPath + "/GetAttivati";
-    var xhr = new XMLHttpRequest();
-    var xhrr = new XMLHttpRequest();
+    const contextPath = window.location.pathname.substring(0, window.location.pathname.indexOf("/", 1));
+    const url = contextPath + "/GetNonAttivati";
+    const url2 = contextPath + "/GetAttivati";
+    const xhr = new XMLHttpRequest();
+    const xhrr = new XMLHttpRequest();
 
     xhr.open("GET", url, true);
-    xhr.onload = function () {
+    xhr.onload = () => {
         if (xhr.status === 200) {
 
-            var response = JSON.parse(xhr.responseText);
+            const response = JSON.parse(xhr.responseText);
             console.log(response);
 
-
-            var listContainer = document.querySelector('.list');
+            const listContainer = document.querySelector('.list');
             listContainer.innerHTML = '';
 
-
-            response.forEach(function (utente) {
-
-                var listItem = document.createElement('p');
+            response.forEach(utente => {
+                const listItem = document.createElement('p');
                 listItem.innerHTML = `
                     <p><strong>Matricola:</strong> ${utente["matricola"]}</p>
                     <p><strong>Email:</strong> ${utente["email"]}</p>
                     <p><strong>Tipo:</strong> ${utente["tipo"]}</p>
                 `;
-
-
                 listContainer.appendChild(listItem);
             });
         } else {
@@ -35,29 +29,24 @@ function aggiornaListaUtenti() {
         }
     };
 
-
     xhrr.open("GET", url2, true);
-    xhrr.onload = function () {
+    xhrr.onload = () => {
         if (xhrr.status === 200) {
-            var response = JSON.parse(xhrr.responseText);
+            const response = JSON.parse(xhrr.responseText);
             console.log(response);
 
-            // Debug: Verifica se l'elemento select è trovato
-            var emailSelect = document.getElementById("email-remove");
+            const emailSelect = document.getElementById("email-remove");
             if (!emailSelect) {
                 console.error("Elemento 'select' non trovato.");
                 return;
             }
 
-
-            var emailSelect = document.getElementById("email-remove");
             emailSelect.innerHTML = '<option value="">-- Seleziona un\'email --</option>';
 
-            response.forEach(function (utente) {
-                var option = document.createElement('option');
+            response.forEach(utente => {
+                const option = document.createElement('option');
                 option.value = utente["email"];
                 option.textContent = utente["email"];
-
                 emailSelect.appendChild(option);
             });
         } else {
@@ -65,12 +54,10 @@ function aggiornaListaUtenti() {
         }
     };
 
-
     xhrr.send();
     xhr.send();
 }
 
-
-window.onload = function() {
+window.onload = () => {
     aggiornaListaUtenti();
 };
