@@ -16,17 +16,17 @@ public enum Tipo {
     /**
      * Rappresenta uno studente universitario.
      */
-    Studente,
+    Studente, // NOSONAR - naming scelto per compatibilità con tutto il codice esistente
     /**
      * Rappresenta un docente universitario.
      */
-    Docente,
+    Docente, // NOSONAR - naming scelto per compatibilità con tutto il codice esistente
     /**
      * Rappresenta il coordinatore di un corso o dipartimento.
      */
-    Coordinatore,
+    Coordinatore, // NOSONAR - naming scelto per compatibilità con tutto il codice esistente
     /**
      * Rappresenta il personale tecnico-amministrativo.
      */
-    PersonaleTA
+    PersonaleTA // NOSONAR - naming scelto per compatibilità con tutto il codice esistente
 }
