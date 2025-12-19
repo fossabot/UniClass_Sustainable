@@ -48,12 +48,16 @@ public class MockDocenteDAO implements DocenteRemote {
     }
 
     @Override
-    public void aggiungiDocente(Docente d) { }
+    public void aggiungiDocente(Docente d) {
+        // Metodo intenzionalmente vuoto: nel mock non è richiesta alcuna implementazione.
+    }
 
     @Override
-    public void rimuoviDocente(Docente d) { }
+    public void rimuoviDocente(Docente d) {
+        // Metodo intenzionalmente vuoto: nel mock non è richiesta alcuna implementazione.
+    }
 
     public void setDocenteDaRitornare(Docente d) {
-        this.docenteDaRitornare=d;
+        this.docenteDaRitornare = d;
     }
 }

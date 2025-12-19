@@ -49,6 +49,6 @@ public class GetAttivati extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-
+        // Metodo intenzionalmente vuoto: questa servlet supporta solo richieste GET.
     }
 }

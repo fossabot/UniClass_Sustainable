@@ -21,14 +21,13 @@ public class ConversazioniServlet extends HttpServlet {
     @EJB
     //@ spec_public
     //@ nullable
-    private MessaggioService messaggioService;
+    private transient MessaggioService messaggioService;
 
     /**
      * Setter per iniettare il MessaggioService (utile per i test).
      * @param messaggioService il service da iniettare
      */
-    //@ requires messaggioService != null;
-    //@ ensures this.messaggioService == messaggioService;
+
     public void setMessaggioService(MessaggioService messaggioService) {
         this.messaggioService = messaggioService;
     }
@@ -38,8 +37,7 @@ public class ConversazioniServlet extends HttpServlet {
      * @param request la richiesta HTTP
      * @param response la risposta HTTP
      */
-    //@ requires request != null;
-    //@ requires response != null;
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         doPost(request, response);
@@ -51,10 +49,7 @@ public class ConversazioniServlet extends HttpServlet {
      * @param request la richiesta HTTP
      * @param response la risposta HTTP
      */
-    //@ requires request != null;
-    //@ requires response != null;
-    //@ requires request.getSession() != null;
-    //@ requires request.getSession().getAttribute("utenteEmail") != null;
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
         try {

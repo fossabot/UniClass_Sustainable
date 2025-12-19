@@ -29,11 +29,36 @@ public class MockAccademicoDAO implements AccademicoRemote {
         return null;
     }
 
-    // Metodi dummy
-    public List<Accademico> trovaTuttiUniClass() { return Collections.emptyList(); }
-    public List<Accademico> trovaAttivati(boolean b) { return Collections.emptyList(); }
-    public void aggiungiAccademico(Accademico a) {}
-    public void rimuoviAccademico(Accademico a) {}
-    public List<String> retrieveEmail() { return Collections.emptyList(); }
-    public void cambiaAttivazione(Accademico a, boolean b) {}
+    // Metodi dummy per il mock: restituiscono valori vuoti o non fanno nulla.
+    // Questi metodi sono intenzionalmente vuoti perché nei test non devono eseguire logica reale.
+
+    @Override
+    public List<Accademico> trovaTuttiUniClass() {
+        return Collections.emptyList();
+    }
+
+    @Override
+    public List<Accademico> trovaAttivati(boolean b) {
+        return Collections.emptyList();
+    }
+
+    @Override
+    public void aggiungiAccademico(Accademico a) {
+        // Metodo intenzionalmente vuoto: nel mock non è richiesta alcuna implementazione.
+    }
+
+    @Override
+    public void rimuoviAccademico(Accademico a) {
+        // Metodo intenzionalmente vuoto: nel mock non è richiesta alcuna implementazione.
+    }
+
+    @Override
+    public List<String> retrieveEmail() {
+        return Collections.emptyList();
+    }
+
+    @Override
+    public void cambiaAttivazione(Accademico a, boolean b) {
+        // Metodo intenzionalmente vuoto: nel mock non è richiesta alcuna implementazione.
+    }
 }

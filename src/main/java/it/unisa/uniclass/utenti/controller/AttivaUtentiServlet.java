@@ -15,9 +15,9 @@ import java.io.IOException;
 @WebServlet(name = "AttivaUtentiServlet", value = "/AttivaUtentiServlet")
 public class AttivaUtentiServlet extends HttpServlet {
 
-    private AccademicoService accademicoService;
+    private transient AccademicoService accademicoService;
 
-    // This method is added for testing purposes
+    // Setter per test
     public void setAccademicoService(AccademicoService accademicoService) {
         this.accademicoService = accademicoService;
     }
@@ -30,7 +30,7 @@ public class AttivaUtentiServlet extends HttpServlet {
         accademicoService = acc;
     }
 
-    // This method is added for testing purposes
+    // Metodo pubblico per i test
     public void doPostPublic(HttpServletRequest req, HttpServletResponse resp) {
         doPost(req, resp);
     }
@@ -45,60 +45,89 @@ public class AttivaUtentiServlet extends HttpServlet {
         try {
             String param = req.getParameter("param");
 
-            if(param.equals("add")){
-                String email = (String) req.getParameter("email");
-                String matricola = (String) req.getParameter("matricola");
-                String tiporeq = (String) req.getParameter("tipo");
-
-                Accademico accademicoEmail = accademicoService.trovaEmailUniClass(email);
-                Accademico accademicoMatricola = accademicoService.trovaAccademicoUniClass(matricola);
-                Accademico accademico = null;
-                Tipo tipo = null;
-                if(tiporeq.equals("Studente")) {
-                    tipo = Tipo.Studente;
-                }
-                else if(tiporeq.equals("Docente")) {
-                    tipo = Tipo.Docente;
-                }
-                else if(tiporeq.equals("Coordinatore")) {
-                    tipo = Tipo.Coordinatore;
-                }
-
-                if(accademicoEmail != null && accademicoMatricola != null &&
-                        accademicoEmail.getEmail().equals(accademicoMatricola.getEmail()) &&
-                        accademicoEmail.getMatricola().equals(accademicoMatricola.getMatricola())){
-                    if(accademicoEmail.getTipo().equals(tipo)) {
-                        accademico = accademicoEmail;
-                        String password = PasswordGenerator.generatePassword(8);
-
-                        accademico.setAttivato(true);
-                        accademico.setPassword(CredentialSecurity.hashPassword(password));
-
-                        accademicoService.aggiungiAccademico(accademico);
-                        System.out.println("\n\n\nPassword generata per l'attivato: " + password + "\n\n\n");
-                        resp.sendRedirect(req.getContextPath() + "/PersonaleTA/AttivaUtenti.jsp");
-                    } else {
-                        resp.sendRedirect(req.getContextPath() + "/PersonaleTA/AttivaUtenti.jsp?action=error");
-                    }
-                } else {
-                    resp.sendRedirect(req.getContextPath() + "/PersonaleTA/AttivaUtenti.jsp?action=error");
-                }
-            } else if(param.equals("remove")){
-                String email = (String) req.getParameter("email-remove");
-
-                Accademico accademico = accademicoService.trovaEmailUniClass(email);
-                if (accademico != null) {
-                    accademicoService.cambiaAttivazione(accademico, false);
-                }
-                resp.sendRedirect(req.getContextPath() + "/PersonaleTA/AttivaUtenti.jsp");
+            if ("add".equals(param)) {
+                handleAdd(req, resp);
+            } else if ("remove".equals(param)) {
+                handleRemove(req, resp);
             }
+
         } catch (IOException e) {
             req.getServletContext().log("Error processing user activation request", e);
             try {
-                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "An error occurred processing your request");
+                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                        "An error occurred processing your request");
             } catch (IOException ioException) {
                 req.getServletContext().log("Failed to send error response", ioException);
             }
         }
+    }
+
+    // -----------------------------
+    //        METODI PRIVATI
+    // -----------------------------
+
+    private void handleAdd(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String email = req.getParameter("email");
+        String matricola = req.getParameter("matricola");
+        String tiporeq = req.getParameter("tipo");
+
+        Accademico accEmail = accademicoService.trovaEmailUniClass(email);
+        Accademico accMatricola = accademicoService.trovaAccademicoUniClass(matricola);
+
+        if (!isSameAccademico(accEmail, accMatricola)) {
+            redirectError(resp, req);
+            return;
+        }
+
+        Tipo tipo = parseTipo(tiporeq);
+        if (tipo == null || !accEmail.getTipo().equals(tipo)) {
+            redirectError(resp, req);
+            return;
+        }
+
+        activateAccademico(accEmail, req);
+        resp.sendRedirect(req.getContextPath() + "/PersonaleTA/AttivaUtenti.jsp");
+    }
+
+    private void handleRemove(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String email = req.getParameter("email-remove");
+
+        Accademico accademico = accademicoService.trovaEmailUniClass(email);
+        if (accademico != null) {
+            accademicoService.cambiaAttivazione(accademico, false);
+        }
+
+        resp.sendRedirect(req.getContextPath() + "/PersonaleTA/AttivaUtenti.jsp");
+    }
+
+    private boolean isSameAccademico(Accademico a1, Accademico a2) {
+        return a1 != null && a2 != null &&
+                a1.getEmail().equals(a2.getEmail()) &&
+                a1.getMatricola().equals(a2.getMatricola());
+    }
+
+    private Tipo parseTipo(String tiporeq) {
+        switch (tiporeq) {
+            case "Studente": return Tipo.Studente;
+            case "Docente": return Tipo.Docente;
+            case "Coordinatore": return Tipo.Coordinatore;
+            default: return null;
+        }
+    }
+
+    private void activateAccademico(Accademico accademico, HttpServletRequest req) {
+        String password = PasswordGenerator.generatePassword(8);
+
+        accademico.setAttivato(true);
+        accademico.setPassword(CredentialSecurity.hashPassword(password));
+
+        accademicoService.aggiungiAccademico(accademico);
+
+        // Log sicuro (niente System.out)
+        req.getServletContext().log("Password generata per l'attivato: " + password);
+    }
+
+    private void redirectError(HttpServletResponse resp, HttpServletRequest req) throws IOException {
+        resp.sendRedirect(req.getContextPath() + "/PersonaleTA/AttivaUtenti.jsp?action=error");
     }
 }

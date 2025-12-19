@@ -1,51 +1,32 @@
-// Funzione per aggiornare il resto e l'anno in base alla selezione del corso di laurea
-function aggiornaResto() {
-    var corsoLaurea = document.getElementById("corsoLaurea").value;
+// Funzione per aggiornare la lista delle email
+const aggiornaEmail = () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "GetEmailServlet", true);
 
-    if (corsoLaurea) {
-        var xhr = new XMLHttpRequest();
-        var xhrr = new XMLHttpRequest();
+    xhr.onload = () => {
+        if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            console.log(response);
 
-        // Richiesta per il resto
-        xhr.open("GET", "getResto?corsoLaurea=" + corsoLaurea, true);
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
+            const emailUtenteCorrente = "<%= accademicoSelf.getEmail() %>";
 
-                console.log(response);
+            // Selezione del campo email
+            const emailSelect = document.getElementById("email");
+            emailSelect.innerHTML = '<option value="" disabled selected>Seleziona un\'email</option>';
 
-                // Aggiorna le opzioni per il "resto"
-                var restoSelect = document.getElementById("resto");
-                restoSelect.innerHTML = '<option value="">-- Seleziona un resto --</option>';
-                response.forEach(function(resto) {
-                    // Aggiungi ogni "resto" come opzione nel select
-                    console.log(resto);
-                    restoSelect.innerHTML += `<option value="${resto["nome"]}">${resto["nome"]}</option>`;
-                });
-            }
-        };
+            // Aggiunta delle email al dropdown
+            response.forEach(email => {
+                if (email !== emailUtenteCorrente) {
+                    emailSelect.innerHTML += `<option value="${email}">${email}</option>`;
+                }
+            });
+        } else {
+            console.error("Errore nella richiesta AJAX: " + xhr.status);
+        }
+    };
 
-        // Richiesta per l'anno didattico
-        xhrr.open("GET", "getAnno?corsoLaurea=" + corsoLaurea, true);
-        xhrr.onload = function() {
-            if (xhrr.status === 200) {  // Corretto: controlla lo stato di xhrr, non xhr
-                var response = JSON.parse(xhrr.responseText);
+    xhr.send();
+};
 
-                console.log(response);
-
-                // Aggiorna le opzioni per l'"anno"
-                var annoSelect = document.getElementById("anno");
-                annoSelect.innerHTML = '<option value="">-- Seleziona un anno --</option>';
-                response.forEach(function(anno) {
-                    console.log(anno);
-                    annoSelect.innerHTML += `<option value="${anno["nome"]}">${anno["nome"]}</option>`;
-                });
-            }
-        };
-
-        // Invia le richieste
-        xhrr.send();
-        xhr.send()
-
-    }
-}
+// Carica le email al caricamento della pagina
+window.onload = aggiornaEmail;

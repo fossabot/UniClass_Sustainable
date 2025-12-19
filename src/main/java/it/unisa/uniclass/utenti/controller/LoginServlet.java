@@ -6,17 +6,21 @@ import it.unisa.uniclass.utenti.model.PersonaleTA;
 import it.unisa.uniclass.utenti.model.Utente;
 import it.unisa.uniclass.utenti.service.AccademicoService;
 import it.unisa.uniclass.utenti.service.PersonaleTAService;
-import jakarta.servlet.annotation.*;
-import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
 @WebServlet(name = "loginServlet", value = "/Login")
-public class LoginServlet extends HttpServlet{
+public class LoginServlet extends HttpServlet {
 
+    private static final String LOGIN_ERROR = "/Login.jsp?action=error";
 
-    private AccademicoService accademicoService;
-    private PersonaleTAService personaleTAService;
+    private transient AccademicoService accademicoService;
+    private transient PersonaleTAService personaleTAService;
 
     public void setAccademicoService(AccademicoService accademicoService) {
         this.accademicoService = accademicoService;
@@ -34,7 +38,6 @@ public class LoginServlet extends HttpServlet{
         return new PersonaleTAService();
     }
 
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         doPost(request, response);
@@ -43,58 +46,74 @@ public class LoginServlet extends HttpServlet{
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
         try {
-            if(accademicoService == null) {
-                accademicoService = new AccademicoService();
-            }
-            if(personaleTAService == null) {
-                personaleTAService = new PersonaleTAService();
-            }
+            initializeServices();
+
             String email = request.getParameter("email");
-            //Password non hashata, così come viene digitata
-            String password = request.getParameter("password");
+            String password = CredentialSecurity.hashPassword(request.getParameter("password"));
 
-            //password hashata, da come viene digitata all'hashing
-            password = CredentialSecurity.hashPassword(password);
             Accademico user1 = accademicoService.trovaEmailPassUniclass(email, password);
-            PersonaleTA user2 = personaleTAService.trovaEmailPass(email,password);
-            Utente user = null;
+            PersonaleTA user2 = personaleTAService.trovaEmailPass(email, password);
 
-
-            /*
-            Si deve prima cercare di capire quale user è null. Quello non null bisogna vedere se è accademico (in quel caso controllare se
-            è attivato, altrimenti senza password c'è errore), altrimenti vedere se è personaleTA (esso non viene attivato, c'è e basta)
-             */
-            if(user1 == null && user2 == null){
-                response.sendRedirect(request.getContextPath() + "/Login.jsp?action=error");
-                return;
-            } else if(user1 != null && user2 == null){
-                if(user1.isAttivato()) {
-                    user = user1;
-                }else if(user1.getPassword() == null){
-                    response.sendRedirect(request.getContextPath() + "/Login.jsp?action=notactivated");
-                    return;
-                }
-            } else if(user1 == null && user2 != null) {
-                user = user2;
+            Utente user = resolveUser(user1, user2, request, response);
+            if (user == null) {
+                return; // redirect già gestito
             }
 
+            HttpSession session = request.getSession(true);
+            session.setAttribute("currentSessionUser", user);
+            response.sendRedirect(request.getContextPath() + "/Home");
 
-            if (user != null) {
-                HttpSession session = request.getSession(true);
-                session.setAttribute("currentSessionUser", user);
-                response.sendRedirect(request.getContextPath() + "/Home");
-                return;
-            } else {
-                response.sendRedirect(request.getContextPath() + "/Login.jsp?action=error");
-                return;
-            }
         } catch (IOException e) {
             request.getServletContext().log("Error processing login request", e);
             try {
-                response.sendRedirect(request.getContextPath() + "/Login.jsp?action=error");
+                response.sendRedirect(request.getContextPath() + LOGIN_ERROR);
             } catch (IOException ioException) {
                 request.getServletContext().log("Failed to redirect after error", ioException);
             }
         }
     }
+
+    // ---------------------------------------------------------
+    //                  METODI PRIVATI
+    // ---------------------------------------------------------
+
+    private void initializeServices() {
+        if (accademicoService == null) {
+            accademicoService = new AccademicoService();
+        }
+        if (personaleTAService == null) {
+            personaleTAService = new PersonaleTAService();
+        }
+    }
+
+    private Utente resolveUser(Accademico user1, PersonaleTA user2,
+                               HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        if (user1 == null && user2 == null) {
+            response.sendRedirect(request.getContextPath() + LOGIN_ERROR);
+            return null;
+        }
+
+        if (user1 != null && user2 == null) {
+            if (user1.isAttivato()) {
+                return user1;
+            }
+
+            if (user1.getPassword() == null) {
+                response.sendRedirect(request.getContextPath() + "/Login.jsp?action=notactivated");
+                return null;
+            }
+
+            // Caso mancante: non attivato + password NON null
+            response.sendRedirect(request.getContextPath() + LOGIN_ERROR);
+            return null;
+        }
+
+        if (user1 == null) {
+            return user2;
+        }
+
+        return null;
+    }
+
 }

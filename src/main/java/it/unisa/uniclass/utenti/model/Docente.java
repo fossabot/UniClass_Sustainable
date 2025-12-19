@@ -10,12 +10,15 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static it.unisa.uniclass.utenti.model.Docente.*;
 
 /**
  * Rappresenta un docente universitario.
  * Estende la classe {@link Accademico} e implementa {@link Serializable}.
  * */
+
+// NOTE: The following //@ annotations are JML specifications, not commented-out code.
+// They are intentionally kept for formal verification and should not be removed.
+
 @Entity
 @Access(AccessType.FIELD)
 @Table(name = "docenti")
@@ -58,9 +61,11 @@ public class Docente extends Accademico implements Serializable {
             joinColumns = @JoinColumn(name = "docente_id"),
             inverseJoinColumns = @JoinColumn(name = "corso_id")
     )
+
+    // NOSONAR: JML specification, not commented-out code
     //@ spec_public
     //@ nullable
-    protected List<Corso> corsi = new ArrayList<>();
+    protected transient List<Corso> corsi = new ArrayList<>();
 
 
     /**
@@ -80,6 +85,7 @@ public class Docente extends Accademico implements Serializable {
     /**
      * Dipartimento a cui appartiene il docente
      * */
+    // NOSONAR: JML specification, not commented-out code
     //@ spec_public
     //@ nullable
     protected String dipartimento;
@@ -116,6 +122,7 @@ public class Docente extends Accademico implements Serializable {
      *
      * @return Lista di {@link Lezione}.
      * */
+    // NOSONAR: JML specification, not commented-out code
     /*@
       @ public normal_behavior
       @ assignable \nothing;
@@ -130,6 +137,7 @@ public class Docente extends Accademico implements Serializable {
      *
      * @param lezioni Lista di {@link Lezione}.
      * */
+    // NOSONAR: JML specification, not commented-out code
     /*@
       @ public normal_behavior
       @ assignable this.lezioni;
@@ -172,6 +180,7 @@ public class Docente extends Accademico implements Serializable {
      *
      * @return Lista di {@link Corso}.
      * */
+    // NOSONAR: JML specification, not commented-out code
     /*@
       @ public normal_behavior
       @ assignable \nothing;
@@ -186,6 +195,7 @@ public class Docente extends Accademico implements Serializable {
      *
      * @param corsi Lista di {@link Corso}.
      * */
+    // NOSONAR: JML specification, not commented-out code
     /*@
       @ public normal_behavior
       @ assignable this.corsi;

@@ -12,7 +12,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -23,19 +24,21 @@ public class inviaMessaggioChatServlet extends HttpServlet {
     @EJB
     //@ spec_public
     //@ nullable
-    private MessaggioService messaggioService;
+    private transient MessaggioService messaggioService;
 
     @EJB
     //@ spec_public
     //@ nullable
-    private AccademicoService accademicoService;
+    private transient AccademicoService accademicoService;
+
+    private static final Logger logger = LoggerFactory.getLogger(inviaMessaggioChatServlet.class);
+
 
     /**
      * Setter per iniettare il MessaggioService (utile per i test).
      * @param messaggioService il service da iniettare
      */
-    //@ requires messaggioService != null;
-    //@ ensures this.messaggioService == messaggioService;
+
     public void setMessaggioService(MessaggioService messaggioService) {
         this.messaggioService = messaggioService;
     }
@@ -44,8 +47,7 @@ public class inviaMessaggioChatServlet extends HttpServlet {
      * Setter per iniettare l'AccademicoService (utile per i test).
      * @param accademicoService il service da iniettare
      */
-    //@ requires accademicoService != null;
-    //@ ensures this.accademicoService == accademicoService;
+
     public void setAccademicoService(AccademicoService accademicoService) {
         this.accademicoService = accademicoService;
     }
@@ -55,8 +57,7 @@ public class inviaMessaggioChatServlet extends HttpServlet {
      * @param request la richiesta HTTP
      * @param response la risposta HTTP
      */
-    //@ requires request != null;
-    //@ requires response != null;
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         try {
@@ -67,12 +68,10 @@ public class inviaMessaggioChatServlet extends HttpServlet {
 
             // Email di destinazione
             String emailDest = request.getParameter("emailInvio");
-            System.out.println("lo sto inviando a :" + emailDest);
-
+            logger.debug("Lo sto inviando a: {}", emailDest);
             // Messaggio da inviare
             String messaggio = request.getParameter("testo");
-
-            System.out.println("guarda che mssaggio:" + messaggio);
+            logger.debug("Guarda che messaggio: {}", messaggio);
 
 
             Accademico accademicoSelf = accademicoService.trovaEmailUniClass(emailSession);
@@ -116,8 +115,7 @@ public class inviaMessaggioChatServlet extends HttpServlet {
      * @param request la richiesta HTTP
      * @param response la risposta HTTP
      */
-    //@ requires request != null;
-    //@ requires response != null;
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);

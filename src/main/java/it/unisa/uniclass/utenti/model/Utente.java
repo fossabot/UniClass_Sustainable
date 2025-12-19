@@ -68,7 +68,13 @@ public class Utente implements Serializable {
       @ assignable \nothing;
       @ ensures true;
       @*/
-    public Utente() {}
+    /**
+     * Costruttore di default richiesto da JPA.
+     * Intenzionalmente vuoto.
+     */
+    public Utente() {
+        // Costruttore intenzionalmente vuoto (necessario per JPA)
+    }
 
     /**
      * Restituisce il nome dell'Utente
