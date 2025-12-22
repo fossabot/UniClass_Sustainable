@@ -65,7 +65,7 @@ public class Docente extends Accademico implements Serializable {
     // NOSONAR: JML specification, not commented-out code
     //@ spec_public
     //@ nullable
-    protected transient List<Corso> corsi = new ArrayList<>();
+    public transient List<Corso> corsi = new ArrayList<>();
 
 
     /**
