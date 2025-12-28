@@ -1,0 +1,6 @@
+=== TECHNICAL DEBT METRICHE ===
+Totale classi: 80
+Service classes (debt design): 40
+DAO/Repository (debt data): 26
+Persistence entities: 14
+Package depth: 23
