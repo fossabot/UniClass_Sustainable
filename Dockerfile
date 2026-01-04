@@ -8,14 +8,18 @@ RUN curl -L https://downloads.apache.org/tomee/tomee-10.1.3/apache-tomee-10.1.3-
     && mv /usr/local/apache-tomee-microprofile-10.1.3 /usr/local/tomee \
     && rm /tmp/tomee.tar.gz
 
+# Scarica il driver PostgreSQL nella cartella lib di TomEE
+RUN curl -L https://jdbc.postgresql.org/download/postgresql-42.7.7.jar -o /usr/local/tomee/lib/postgresql-42.7.7.jar
+
 
 
 # Si copia il war nel target (grazie a mvn clean package) all'interno del container della webapp
 COPY target/UniClass-Dependability.war /usr/local/tomee/webapps/UniClass-Dependability.war
 
-# Si copiano i context e system.properties (che aggiungono info sulla Risorsa DB e Proprietà sul sistema blacklist/whitelist EJB) nel container webapp
+# Si copiano i context, system.properties e tomee.xml (che aggiungono info sulla Risorsa DB e Proprietà sul sistema blacklist/whitelist EJB) nel container webapp
 COPY .smarttomcat/UniClass-Dependability/conf/context.xml /usr/local/tomee/conf/context.xml
 COPY .smarttomcat/UniClass-Dependability/conf/system.properties /usr/local/tomee/conf/system.properties
+COPY .smarttomcat/UniClass-Dependability/conf/tomee.xml /usr/local/tomee/conf/tomee.xml
 
 # Utile per mettere in attesa tomEE per l'avvio del dbuniclass. Ottimo se il server non si riavvia automaticamente alla ricerca del driver attivo
 # COPY wait-for-it.sh /wait-for-it.sh

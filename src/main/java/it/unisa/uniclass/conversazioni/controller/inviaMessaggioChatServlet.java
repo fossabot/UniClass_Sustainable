@@ -24,12 +24,12 @@ public class inviaMessaggioChatServlet extends HttpServlet {
     @EJB
     //@ spec_public
     //@ nullable
-    private transient MessaggioService messaggioService;
+    private MessaggioService messaggioService;
 
     @EJB
     //@ spec_public
     //@ nullable
-    private transient AccademicoService accademicoService;
+    private AccademicoService accademicoService;
 
     private static final Logger logger = LoggerFactory.getLogger(inviaMessaggioChatServlet.class);
 

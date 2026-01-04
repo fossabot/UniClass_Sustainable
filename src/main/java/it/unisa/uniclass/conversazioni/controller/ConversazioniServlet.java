@@ -21,7 +21,7 @@ public class ConversazioniServlet extends HttpServlet {
     @EJB
     //@ spec_public
     //@ nullable
-    private transient MessaggioService messaggioService;
+    private MessaggioService messaggioService;
 
     /**
      * Setter per iniettare il MessaggioService (utile per i test).

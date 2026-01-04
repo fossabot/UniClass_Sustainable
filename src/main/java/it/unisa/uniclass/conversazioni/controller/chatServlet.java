@@ -29,10 +29,10 @@ public class chatServlet extends HttpServlet {
     private static final String ATTR_MESSAGGI_RICEVUTI = "messaggiRicevuti";
 
     @EJB
-    private transient MessaggioService messaggioService;
+    private MessaggioService messaggioService;
 
     @EJB
-    private transient AccademicoService accademicoService;
+    private AccademicoService accademicoService;
 
     /**
      * Setter per iniettare il MessaggioService (utile per i test).

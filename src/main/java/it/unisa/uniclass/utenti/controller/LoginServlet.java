@@ -19,8 +19,8 @@ public class LoginServlet extends HttpServlet {
 
     private static final String LOGIN_ERROR = "/Login.jsp?action=error";
 
-    private transient AccademicoService accademicoService;
-    private transient PersonaleTAService personaleTAService;
+    private AccademicoService accademicoService;
+    private PersonaleTAService personaleTAService;
 
     public void setAccademicoService(AccademicoService accademicoService) {
         this.accademicoService = accademicoService;

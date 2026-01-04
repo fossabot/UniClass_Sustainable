@@ -15,7 +15,7 @@ import java.io.IOException;
 @WebServlet(name = "AttivaUtentiServlet", value = "/AttivaUtentiServlet")
 public class AttivaUtentiServlet extends HttpServlet {
 
-    private transient AccademicoService accademicoService;
+    private AccademicoService accademicoService;
 
     // Setter per test
     public void setAccademicoService(AccademicoService accademicoService) {

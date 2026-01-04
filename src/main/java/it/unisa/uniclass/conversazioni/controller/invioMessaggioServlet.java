@@ -27,12 +27,12 @@ public class invioMessaggioServlet extends HttpServlet {
     @EJB
     //@ spec_public
     //@ nullable
-    private transient MessaggioService messaggioService;
+    private MessaggioService messaggioService;
 
     @EJB
     //@ spec_public
     //@ nullable
-    private transient AccademicoService accademicoService;
+    private AccademicoService accademicoService;
 
     /**
      * Setter per iniettare il MessaggioService (utile per i test).
