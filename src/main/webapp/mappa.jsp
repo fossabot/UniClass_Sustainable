@@ -151,9 +151,11 @@
 		container.innerHTML = `
         <iframe
             class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6043.0962216837215!2d14.786334038892628!3d40.77196272409155!5e0!3m2!1sit!2sit"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.0962216837215!2d14.7889441!3d40.7719627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bc5dc8cfed6d7%3A0xfde22b53e7c5e9fc!2sUniversit%C3%A0%20degli%20Studi%20di%20Salerno!5e0!3m2!1sit!2sit!4v1704300000000!5m2!1sit!2sit"
             width="1000"
             height="700"
+            style="border:0;"
+            allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>

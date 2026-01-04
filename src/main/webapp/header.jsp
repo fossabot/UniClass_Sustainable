@@ -36,7 +36,7 @@
 	<header>
 		<div class="TastoMenu">
         	<span style="font-size:50px;cursor:pointer" onclick="openNav()">
-        		<img src="${pageContext.request.contextPath}/images/icons/menuClosedIcon.png" alt="open">
+        		<img src="${pageContext.request.contextPath}/images/icons/menuClosedIcon.webp" alt="open">
         	</span>
         </div>
 
@@ -49,7 +49,7 @@
         <div class="TastoLogin" >
             <span style="font-size:30px;cursor:pointer">
                 <a href="${pageContext.request.contextPath}/Login.jsp">
-                    <img src="${pageContext.request.contextPath}/images/icons/usericonnolog.png" alt="open">
+                    <img src="${pageContext.request.contextPath}/images/icons/usericonnolog.webp" alt="open">
                 </a>
             </span>
         </div>
@@ -58,7 +58,7 @@
         <div class="TastoLogin" >
             <span style="font-size:30px;cursor:pointer">
                 <a href="${pageContext.request.contextPath}/Account.jsp">
-                    <img src="${pageContext.request.contextPath}/images/icons/usericonlog.png" alt="open">
+                    <img src="${pageContext.request.contextPath}/images/icons/usericonlog.webp" alt="open">
                 </a>
             </span>
         </div>

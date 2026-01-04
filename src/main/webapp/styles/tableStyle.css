@@ -3,24 +3,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    min-height: 50vh;
     margin: 0;
+    padding: 0 10px;
+    overflow-x: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Stile per la tabella */
 .schedule-table {
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    table-layout: fixed;
 }
 
 .schedule-table th,
 .schedule-table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 4px 2px;
     text-align: center;
+    font-size: 11px;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 .schedule-table th {
@@ -45,7 +54,7 @@
 
 /* Ridimensionare il testo nelle celle */
 .schedule-table td {
-    font-size: 14px;
+    font-size: 10px;
 }
 
 /* Stile per il titolo */
@@ -84,5 +93,5 @@ h1 {
 
 /* Stile di default per tutte le materie (opzionale) */
 td[class^="subject-"] {
-    padding: 10px; /* Aggiungi un po' di spazio interno */
+    padding: 4px 2px; /* Ridotto per risparmiare spazio */
 }

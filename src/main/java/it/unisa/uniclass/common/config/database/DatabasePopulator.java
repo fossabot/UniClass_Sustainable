@@ -161,15 +161,58 @@ public class DatabasePopulator {
         lezione6.setOraFine(Time.valueOf(TIME_1730));
         lezione6.setSemestre(1);
 
+        // Creazione delle aule
+        Aula aulaF1 = new Aula();
+        aulaF1.setNome("F1");
+        aulaF1.setEdificio("F");
+
+        Aula aulaF2 = new Aula();
+        aulaF2.setNome("F2");
+        aulaF2.setEdificio("F");
+
+        Aula aulaF3 = new Aula();
+        aulaF3.setNome("F3");
+        aulaF3.setEdificio("F");
+
+        Aula aulaP1 = new Aula();
+        aulaP1.setNome("P1");
+        aulaP1.setEdificio("P");
+
+        Aula aulaP2 = new Aula();
+        aulaP2.setNome("P2");
+        aulaP2.setEdificio("P");
+
+        // Associazione lezioni alle aule
+        lezione1.setAula(aulaF1);
+        lezione2.setAula(aulaF2);
+        lezione3.setAula(aulaF3);
+        lezione4.setAula(aulaP1);
+        lezione5.setAula(aulaP2);
+        lezione6.setAula(aulaF1);
+
         // Persistenza
         em.persist(anno1);
         em.persist(anno2);
         em.persist(anno3);
         em.persist(corsoLaurea);
         em.persist(corsoLaurea2);
+        em.persist(resto);
+        em.persist(resto2);
+        em.persist(resto3);
         em.persist(corso1);
         em.persist(corso2);
         em.persist(corso3);
+        em.persist(aulaF1);
+        em.persist(aulaF2);
+        em.persist(aulaF3);
+        em.persist(aulaP1);
+        em.persist(aulaP2);
+        em.persist(lezione1);
+        em.persist(lezione2);
+        em.persist(lezione3);
+        em.persist(lezione4);
+        em.persist(lezione5);
+        em.persist(lezione6);
         em.flush();
         em.clear();
     }

@@ -41,7 +41,7 @@
 <% if(tipoUtente == null) { %>
 
 <div class="barraNavigazione" id="barraNavigazione">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/icons/menuOpenIcon.png" alt="closebtn"></a>
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/icons/menuOpenIcon.webp" alt="closebtn"></a>
 	<p>Menu<p>
 	<ul id="menu">
 		<li id="aule"><a href="aula.jsp">Aule</a>
@@ -60,7 +60,7 @@
 <% } else if(tipoUtente.equals(Tipo.Studente)) { %>
 
 <div class="barraNavigazione" id="barraNavigazione">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/icons/menuOpenIcon.png" alt="closebtn"></a>
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/icons/menuOpenIcon.webp" alt="closebtn"></a>
 	<p>Menu<p>
 	<ul id="menu">
 		<li id="aule"><a href="aula.jsp">Aule</a>
@@ -80,7 +80,7 @@
 <% } else if(tipoUtente.equals(Tipo.Docente) || tipoUtente.equals(Tipo.Coordinatore)) { %>
 
 <div class="barraNavigazione" id="barraNavigazione">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/icons/menuOpenIcon.png" alt="closebtn"></a>
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/icons/menuOpenIcon.webp" alt="closebtn"></a>
 	<p>Menu<p>
 	<li id="aule"><a href="aula.jsp">Aule</a>
 	</li>
@@ -100,7 +100,7 @@
 <% } else if(tipoUtente.equals(Tipo.PersonaleTA)) { %>
 
 <div class="barraNavigazione" id="barraNavigazione">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/icons/menuOpenIcon.png" alt="closebtn"></a>
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/icons/menuOpenIcon.webp" alt="closebtn"></a>
 	<p>Menu<p>
 	<ul id="menu">
 		<li id="aule"><a href="aula.jsp">Aule</a>

@@ -42,7 +42,7 @@
 
 
 <div class="barraNavigazione" id="barraNavigazione">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="${pageContext.request.contextPath}/images/icons/menuOpenIcon.png" alt="closebtn"></a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="${pageContext.request.contextPath}/images/icons/menuOpenIcon.webp" alt="closebtn"></a>
     <p>Menu<p>
     <ul id="menu">
         <li id="aule"><a href="${pageContext.request.contextPath}/aula.jsp">Aule</a>
