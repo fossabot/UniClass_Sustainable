@@ -1,0 +1,3259 @@
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE messaggi (ID  SERIAL NOT NULL, BODY VARCHAR(255) NOT NULL, DATETIME TIMESTAMP, autore VARCHAR(255), destinatario VARCHAR(255), topic BIGINT, PRIMARY KEY (ID))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.363--ServerSession(2135059933)--Connection(1585358875)--Thread(Thread[#1,main,5,main])--CREATE TABLE messaggi (ID  SERIAL NOT NULL, BODY VARCHAR(255) NOT NULL, DATETIME TIMESTAMP, autore VARCHAR(255), destinatario VARCHAR(255), topic BIGINT, PRIMARY KEY (ID))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=20112484,
+tomee-1     |   local time=20112484,
+tomee-1     |   profiling time=152475,
+tomee-1     |   Timer:Logging=132667,
+tomee-1     |   Timer:SqlPrepare=122126,
+tomee-1     |   Timer:ConnectionManagement=186065,
+tomee-1     |   Timer:StatementExecute=19216994,
+tomee-1     |   Timer:QueryPreparation=26301,
+tomee-1     |   time/object=20112484,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE topics (ID  SERIAL NOT NULL, NOME VARCHAR(255), corso_id BIGINT, corso_laurea_id BIGINT, PRIMARY KEY (ID))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.383--ServerSession(2135059933)--Connection(1486504709)--Thread(Thread[#1,main,5,main])--CREATE TABLE topics (ID  SERIAL NOT NULL, NOME VARCHAR(255), corso_id BIGINT, corso_laurea_id BIGINT, PRIMARY KEY (ID))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3620634,
+tomee-1     |   local time=3620634,
+tomee-1     |   profiling time=152886,
+tomee-1     |   Timer:Logging=110812,
+tomee-1     |   Timer:SqlPrepare=95723,
+tomee-1     |   Timer:ConnectionManagement=182198,
+tomee-1     |   Timer:StatementExecute=2935489,
+tomee-1     |   Timer:QueryPreparation=29010,
+tomee-1     |   time/object=3620634,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE CORSOLAUREA (ID  SERIAL NOT NULL, NOME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (ID))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.388--ServerSession(2135059933)--Connection(1969754956)--Thread(Thread[#1,main,5,main])--CREATE TABLE CORSOLAUREA (ID  SERIAL NOT NULL, NOME VARCHAR(255) NOT NULL UNIQUE, PRIMARY KEY (ID))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=5504861,
+tomee-1     |   local time=5504861,
+tomee-1     |   profiling time=131806,
+tomee-1     |   Timer:Logging=196859,
+tomee-1     |   Timer:SqlPrepare=146375,
+tomee-1     |   Timer:ConnectionManagement=181831,
+tomee-1     |   Timer:StatementExecute=4699704,
+tomee-1     |   Timer:QueryPreparation=28721,
+tomee-1     |   time/object=5504861,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE corsi (ID  SERIAL NOT NULL, NOME VARCHAR(255), anno_didattico_id INTEGER NOT NULL, corso_laurea_id BIGINT, PRIMARY KEY (ID))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.393--ServerSession(2135059933)--Connection(684154003)--Thread(Thread[#1,main,5,main])--CREATE TABLE corsi (ID  SERIAL NOT NULL, NOME VARCHAR(255), anno_didattico_id INTEGER NOT NULL, corso_laurea_id BIGINT, PRIMARY KEY (ID))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3203841,
+tomee-1     |   local time=3203841,
+tomee-1     |   profiling time=86272,
+tomee-1     |   Timer:Logging=108615,
+tomee-1     |   Timer:SqlPrepare=94353,
+tomee-1     |   Timer:ConnectionManagement=154198,
+tomee-1     |   Timer:StatementExecute=2621117,
+tomee-1     |   Timer:QueryPreparation=24625,
+tomee-1     |   time/object=3203841,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE lezioni (ID  SERIAL NOT NULL, GIORNO VARCHAR(255), ORAFINE TIME, ORAINIZIO TIME, SEMESTRE INTEGER, aula_id INTEGER, corso_id BIGINT, resto_id BIGINT, PRIMARY KEY (ID))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.397--ServerSession(2135059933)--Connection(55711712)--Thread(Thread[#1,main,5,main])--CREATE TABLE lezioni (ID  SERIAL NOT NULL, GIORNO VARCHAR(255), ORAFINE TIME, ORAINIZIO TIME, SEMESTRE INTEGER, aula_id INTEGER, corso_id BIGINT, resto_id BIGINT, PRIMARY KEY (ID))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4941465,
+tomee-1     |   local time=4941465,
+tomee-1     |   profiling time=128234,
+tomee-1     |   Timer:Logging=120513,
+tomee-1     |   Timer:SqlPrepare=106435,
+tomee-1     |   Timer:ConnectionManagement=164225,
+tomee-1     |   Timer:StatementExecute=4252894,
+tomee-1     |   Timer:QueryPreparation=43507,
+tomee-1     |   time/object=4941465,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE anni (ID  SERIAL NOT NULL, ANNO VARCHAR(255), PRIMARY KEY (ID))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.402--ServerSession(2135059933)--Connection(156954340)--Thread(Thread[#1,main,5,main])--CREATE TABLE anni (ID  SERIAL NOT NULL, ANNO VARCHAR(255), PRIMARY KEY (ID))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4773136,
+tomee-1     |   local time=4773136,
+tomee-1     |   profiling time=146564,
+tomee-1     |   Timer:Logging=97058,
+tomee-1     |   Timer:SqlPrepare=91419,
+tomee-1     |   Timer:ConnectionManagement=162888,
+tomee-1     |   Timer:StatementExecute=4156982,
+tomee-1     |   Timer:QueryPreparation=26178,
+tomee-1     |   time/object=4773136,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE aule (ID  SERIAL NOT NULL, EDIFICIO VARCHAR(255), NOME VARCHAR(255), PRIMARY KEY (ID))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.408--ServerSession(2135059933)--Connection(1008561904)--Thread(Thread[#1,main,5,main])--CREATE TABLE aule (ID  SERIAL NOT NULL, EDIFICIO VARCHAR(255), NOME VARCHAR(255), PRIMARY KEY (ID))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=5149157,
+tomee-1     |   local time=5149157,
+tomee-1     |   profiling time=143614,
+tomee-1     |   Timer:Logging=164173,
+tomee-1     |   Timer:SqlPrepare=144394,
+tomee-1     |   Timer:ConnectionManagement=176647,
+tomee-1     |   Timer:StatementExecute=4359830,
+tomee-1     |   Timer:QueryPreparation=28861,
+tomee-1     |   time/object=5149157,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE RESTO (ID  SERIAL NOT NULL, NOME VARCHAR(255), corso_laurea_id BIGINT NOT NULL, PRIMARY KEY (ID))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.413--ServerSession(2135059933)--Connection(774676004)--Thread(Thread[#1,main,5,main])--CREATE TABLE RESTO (ID  SERIAL NOT NULL, NOME VARCHAR(255), corso_laurea_id BIGINT NOT NULL, PRIMARY KEY (ID))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4088838,
+tomee-1     |   local time=4088838,
+tomee-1     |   profiling time=112563,
+tomee-1     |   Timer:Logging=126089,
+tomee-1     |   Timer:SqlPrepare=94944,
+tomee-1     |   Timer:ConnectionManagement=190836,
+tomee-1     |   Timer:StatementExecute=3362472,
+tomee-1     |   Timer:QueryPreparation=29712,
+tomee-1     |   time/object=4088838,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE ACCADEMICO (MATRICOLA VARCHAR(255) NOT NULL, DTYPE VARCHAR(31), ATTIVATO BOOLEAN, COGNOME VARCHAR(255), DATANASCITA DATE, EMAIL VARCHAR(255), ISCRIZIONE DATE, NOME VARCHAR(255), PASSWORD VARCHAR(255), TIPO INTEGER, corso_laurea_id BIGINT, PRIMARY KEY (MATRICOLA))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.419--ServerSession(2135059933)--Connection(1037201686)--Thread(Thread[#1,main,5,main])--CREATE TABLE ACCADEMICO (MATRICOLA VARCHAR(255) NOT NULL, DTYPE VARCHAR(31), ATTIVATO BOOLEAN, COGNOME VARCHAR(255), DATANASCITA DATE, EMAIL VARCHAR(255), ISCRIZIONE DATE, NOME VARCHAR(255), PASSWORD VARCHAR(255), TIPO INTEGER, corso_laurea_id BIGINT, PRIMARY KEY (MATRICOLA))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=5357477,
+tomee-1     |   local time=5357477,
+tomee-1     |   profiling time=260005,
+tomee-1     |   Timer:Logging=153053,
+tomee-1     |   Timer:SqlPrepare=117031,
+tomee-1     |   Timer:ConnectionManagement=378828,
+tomee-1     |   Timer:StatementExecute=4371727,
+tomee-1     |   Timer:QueryPreparation=69971,
+tomee-1     |   time/object=5357477,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE docenti (MATRICOLA VARCHAR(255) NOT NULL, DIPARTIMENTO VARCHAR(255), PRIMARY KEY (MATRICOLA))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.425--ServerSession(2135059933)--Connection(1663141254)--Thread(Thread[#1,main,5,main])--CREATE TABLE docenti (MATRICOLA VARCHAR(255) NOT NULL, DIPARTIMENTO VARCHAR(255), PRIMARY KEY (MATRICOLA))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=5633449,
+tomee-1     |   local time=5633449,
+tomee-1     |   profiling time=135834,
+tomee-1     |   Timer:Logging=226623,
+tomee-1     |   Timer:SqlPrepare=115746,
+tomee-1     |   Timer:ConnectionManagement=373746,
+tomee-1     |   Timer:StatementExecute=4475458,
+tomee-1     |   Timer:QueryPreparation=26804,
+tomee-1     |   time/object=5633449,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE coordinatori (MATRICOLA VARCHAR(255) NOT NULL, PRIMARY KEY (MATRICOLA))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.431--ServerSession(2135059933)--Connection(874253820)--Thread(Thread[#1,main,5,main])--CREATE TABLE coordinatori (MATRICOLA VARCHAR(255) NOT NULL, PRIMARY KEY (MATRICOLA))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3076531,
+tomee-1     |   local time=3076531,
+tomee-1     |   profiling time=170580,
+tomee-1     |   Timer:Logging=117803,
+tomee-1     |   Timer:SqlPrepare=96516,
+tomee-1     |   Timer:ConnectionManagement=214081,
+tomee-1     |   Timer:StatementExecute=2321659,
+tomee-1     |   Timer:QueryPreparation=26936,
+tomee-1     |   time/object=3076531,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE studenti (MATRICOLA VARCHAR(255) NOT NULL, resto BIGINT, PRIMARY KEY (MATRICOLA))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.434--ServerSession(2135059933)--Connection(2114676965)--Thread(Thread[#1,main,5,main])--CREATE TABLE studenti (MATRICOLA VARCHAR(255) NOT NULL, resto BIGINT, PRIMARY KEY (MATRICOLA))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3457711,
+tomee-1     |   local time=3457711,
+tomee-1     |   profiling time=160250,
+tomee-1     |   Timer:Logging=157722,
+tomee-1     |   Timer:SqlPrepare=126302,
+tomee-1     |   Timer:ConnectionManagement=173149,
+tomee-1     |   Timer:StatementExecute=2710456,
+tomee-1     |   Timer:QueryPreparation=32694,
+tomee-1     |   time/object=3457711,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE personaleTA (ID  SERIAL NOT NULL, COGNOME VARCHAR(255), DATANASCITA DATE, EMAIL VARCHAR(255), NOME VARCHAR(255), PASSWORD VARCHAR(255), TELEFONO VARCHAR(255), TIPO INTEGER, PRIMARY KEY (ID))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.439--ServerSession(2135059933)--Connection(1350561011)--Thread(Thread[#1,main,5,main])--CREATE TABLE personaleTA (ID  SERIAL NOT NULL, COGNOME VARCHAR(255), DATANASCITA DATE, EMAIL VARCHAR(255), NOME VARCHAR(255), PASSWORD VARCHAR(255), TELEFONO VARCHAR(255), TIPO INTEGER, PRIMARY KEY (ID))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=8529520,
+tomee-1     |   local time=8529520,
+tomee-1     |   profiling time=122786,
+tomee-1     |   Timer:Logging=379291,
+tomee-1     |   Timer:SqlPrepare=306382,
+tomee-1     |   Timer:ConnectionManagement=228888,
+tomee-1     |   Timer:StatementExecute=7141423,
+tomee-1     |   Timer:QueryPreparation=237714,
+tomee-1     |   time/object=8529520,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE corso_laurea_anno_didattico (corso_laurea_id BIGINT NOT NULL, anno_didattico_id INTEGER NOT NULL, PRIMARY KEY (corso_laurea_id, anno_didattico_id))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.447--ServerSession(2135059933)--Connection(1058885327)--Thread(Thread[#1,main,5,main])--CREATE TABLE corso_laurea_anno_didattico (corso_laurea_id BIGINT NOT NULL, anno_didattico_id INTEGER NOT NULL, PRIMARY KEY (corso_laurea_id, anno_didattico_id))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3237180,
+tomee-1     |   local time=3237180,
+tomee-1     |   profiling time=60783,
+tomee-1     |   Timer:Logging=86121,
+tomee-1     |   Timer:SqlPrepare=90319,
+tomee-1     |   Timer:ConnectionManagement=129515,
+tomee-1     |   Timer:StatementExecute=2710484,
+tomee-1     |   Timer:QueryPreparation=22039,
+tomee-1     |   time/object=3237180,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE docente_corso (corso_id BIGINT NOT NULL, docente_id VARCHAR(255) NOT NULL, PRIMARY KEY (corso_id, docente_id))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.451--ServerSession(2135059933)--Connection(1807402813)--Thread(Thread[#1,main,5,main])--CREATE TABLE docente_corso (corso_id BIGINT NOT NULL, docente_id VARCHAR(255) NOT NULL, PRIMARY KEY (corso_id, docente_id))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2660198,
+tomee-1     |   local time=2660198,
+tomee-1     |   profiling time=102264,
+tomee-1     |   Timer:Logging=128614,
+tomee-1     |   Timer:SqlPrepare=102187,
+tomee-1     |   Timer:ConnectionManagement=226812,
+tomee-1     |   Timer:StatementExecute=1961550,
+tomee-1     |   Timer:QueryPreparation=28521,
+tomee-1     |   time/object=2660198,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="CREATE TABLE docente_lezione (lezione_id BIGINT NOT NULL, docente_id VARCHAR(255) NOT NULL, PRIMARY KEY (lezione_id, docente_id))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.454--ServerSession(2135059933)--Connection(1314113263)--Thread(Thread[#1,main,5,main])--CREATE TABLE docente_lezione (lezione_id BIGINT NOT NULL, docente_id VARCHAR(255) NOT NULL, PRIMARY KEY (lezione_id, docente_id))
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=6121175,
+tomee-1     |   local time=6121175,
+tomee-1     |   profiling time=84581,
+tomee-1     |   Timer:Logging=106485,
+tomee-1     |   Timer:SqlPrepare=94781,
+tomee-1     |   Timer:ConnectionManagement=182853,
+tomee-1     |   Timer:StatementExecute=5451604,
+tomee-1     |   Timer:QueryPreparation=23642,
+tomee-1     |   time/object=6121175,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE messaggi ADD CONSTRAINT FK_messaggi_autore FOREIGN KEY (autore) REFERENCES ACCADEMICO (MATRICOLA)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.461--ServerSession(2135059933)--Connection(1633989538)--Thread(Thread[#1,main,5,main])--ALTER TABLE messaggi ADD CONSTRAINT FK_messaggi_autore FOREIGN KEY (autore) REFERENCES ACCADEMICO (MATRICOLA)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=10740704,
+tomee-1     |   local time=10740704,
+tomee-1     |   profiling time=115596,
+tomee-1     |   Timer:Logging=127292,
+tomee-1     |   Timer:SqlPrepare=128948,
+tomee-1     |   Timer:ConnectionManagement=224725,
+tomee-1     |   Timer:StatementExecute=9932422,
+tomee-1     |   Timer:QueryPreparation=30036,
+tomee-1     |   time/object=10740704,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE messaggi ADD CONSTRAINT FK_messaggi_topic FOREIGN KEY (topic) REFERENCES topics (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.472--ServerSession(2135059933)--Connection(878375543)--Thread(Thread[#1,main,5,main])--ALTER TABLE messaggi ADD CONSTRAINT FK_messaggi_topic FOREIGN KEY (topic) REFERENCES topics (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3862175,
+tomee-1     |   local time=3862175,
+tomee-1     |   profiling time=312998,
+tomee-1     |   Timer:Logging=201714,
+tomee-1     |   Timer:SqlPrepare=148453,
+tomee-1     |   Timer:ConnectionManagement=428995,
+tomee-1     |   Timer:StatementExecute=2793198,
+tomee-1     |   Timer:QueryPreparation=37424,
+tomee-1     |   time/object=3862175,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE messaggi ADD CONSTRAINT FK_messaggi_destinatario FOREIGN KEY (destinatario) REFERENCES ACCADEMICO (MATRICOLA)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.476--ServerSession(2135059933)--Connection(157567214)--Thread(Thread[#1,main,5,main])--ALTER TABLE messaggi ADD CONSTRAINT FK_messaggi_destinatario FOREIGN KEY (destinatario) REFERENCES ACCADEMICO (MATRICOLA)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3473985,
+tomee-1     |   local time=3473985,
+tomee-1     |   profiling time=127769,
+tomee-1     |   Timer:Logging=210407,
+tomee-1     |   Timer:SqlPrepare=129642,
+tomee-1     |   Timer:ConnectionManagement=326265,
+tomee-1     |   Timer:StatementExecute=2539494,
+tomee-1     |   Timer:QueryPreparation=48348,
+tomee-1     |   time/object=3473985,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE topics ADD CONSTRAINT FK_topics_corso_id FOREIGN KEY (corso_id) REFERENCES corsi (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.48--ServerSession(2135059933)--Connection(1498452883)--Thread(Thread[#1,main,5,main])--ALTER TABLE topics ADD CONSTRAINT FK_topics_corso_id FOREIGN KEY (corso_id) REFERENCES corsi (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=6041557,
+tomee-1     |   local time=6041557,
+tomee-1     |   profiling time=136549,
+tomee-1     |   Timer:Logging=127027,
+tomee-1     |   Timer:SqlPrepare=98424,
+tomee-1     |   Timer:ConnectionManagement=180491,
+tomee-1     |   Timer:StatementExecute=5344133,
+tomee-1     |   Timer:QueryPreparation=29593,
+tomee-1     |   time/object=6041557,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE topics ADD CONSTRAINT FK_topics_corso_laurea_id FOREIGN KEY (corso_laurea_id) REFERENCES CORSOLAUREA (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.486--ServerSession(2135059933)--Connection(493732536)--Thread(Thread[#1,main,5,main])--ALTER TABLE topics ADD CONSTRAINT FK_topics_corso_laurea_id FOREIGN KEY (corso_laurea_id) REFERENCES CORSOLAUREA (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=7433238,
+tomee-1     |   local time=7433238,
+tomee-1     |   profiling time=101340,
+tomee-1     |   Timer:Logging=135993,
+tomee-1     |   Timer:SqlPrepare=121703,
+tomee-1     |   Timer:ConnectionManagement=235556,
+tomee-1     |   Timer:StatementExecute=6698610,
+tomee-1     |   Timer:QueryPreparation=30980,
+tomee-1     |   time/object=7433238,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE corsi ADD CONSTRAINT FK_corsi_corso_laurea_id FOREIGN KEY (corso_laurea_id) REFERENCES CORSOLAUREA (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.494--ServerSession(2135059933)--Connection(2126991912)--Thread(Thread[#1,main,5,main])--ALTER TABLE corsi ADD CONSTRAINT FK_corsi_corso_laurea_id FOREIGN KEY (corso_laurea_id) REFERENCES CORSOLAUREA (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3223428,
+tomee-1     |   local time=3223428,
+tomee-1     |   profiling time=83010,
+tomee-1     |   Timer:Logging=137967,
+tomee-1     |   Timer:SqlPrepare=143793,
+tomee-1     |   Timer:ConnectionManagement=169591,
+tomee-1     |   Timer:StatementExecute=2561694,
+tomee-1     |   Timer:QueryPreparation=25098,
+tomee-1     |   time/object=3223428,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE corsi ADD CONSTRAINT FK_corsi_anno_didattico_id FOREIGN KEY (anno_didattico_id) REFERENCES anni (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.498--ServerSession(2135059933)--Connection(1439651366)--Thread(Thread[#1,main,5,main])--ALTER TABLE corsi ADD CONSTRAINT FK_corsi_anno_didattico_id FOREIGN KEY (anno_didattico_id) REFERENCES anni (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3074460,
+tomee-1     |   local time=3074460,
+tomee-1     |   profiling time=109027,
+tomee-1     |   Timer:Logging=164218,
+tomee-1     |   Timer:SqlPrepare=123060,
+tomee-1     |   Timer:ConnectionManagement=345219,
+tomee-1     |   Timer:StatementExecute=2151495,
+tomee-1     |   Timer:QueryPreparation=65045,
+tomee-1     |   time/object=3074460,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE lezioni ADD CONSTRAINT FK_lezioni_resto_id FOREIGN KEY (resto_id) REFERENCES RESTO (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.503--ServerSession(2135059933)--Connection(1819055096)--Thread(Thread[#1,main,5,main])--ALTER TABLE lezioni ADD CONSTRAINT FK_lezioni_resto_id FOREIGN KEY (resto_id) REFERENCES RESTO (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=5122472,
+tomee-1     |   local time=5122472,
+tomee-1     |   profiling time=98058,
+tomee-1     |   Timer:Logging=202835,
+tomee-1     |   Timer:SqlPrepare=115930,
+tomee-1     |   Timer:ConnectionManagement=1669516,
+tomee-1     |   Timer:StatementExecute=2735651,
+tomee-1     |   Timer:QueryPreparation=32710,
+tomee-1     |   time/object=5122472,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE lezioni ADD CONSTRAINT FK_lezioni_aula_id FOREIGN KEY (aula_id) REFERENCES aule (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.507--ServerSession(2135059933)--Connection(954764819)--Thread(Thread[#1,main,5,main])--ALTER TABLE lezioni ADD CONSTRAINT FK_lezioni_aula_id FOREIGN KEY (aula_id) REFERENCES aule (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=5252652,
+tomee-1     |   local time=5252652,
+tomee-1     |   profiling time=107109,
+tomee-1     |   Timer:Logging=208470,
+tomee-1     |   Timer:SqlPrepare=200948,
+tomee-1     |   Timer:ConnectionManagement=412676,
+tomee-1     |   Timer:StatementExecute=4107558,
+tomee-1     |   Timer:QueryPreparation=66375,
+tomee-1     |   time/object=5252652,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE lezioni ADD CONSTRAINT FK_lezioni_corso_id FOREIGN KEY (corso_id) REFERENCES corsi (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.514--ServerSession(2135059933)--Connection(980552419)--Thread(Thread[#1,main,5,main])--ALTER TABLE lezioni ADD CONSTRAINT FK_lezioni_corso_id FOREIGN KEY (corso_id) REFERENCES corsi (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4272158,
+tomee-1     |   local time=4272158,
+tomee-1     |   profiling time=163383,
+tomee-1     |   Timer:Logging=125298,
+tomee-1     |   Timer:SqlPrepare=119045,
+tomee-1     |   Timer:ConnectionManagement=274910,
+tomee-1     |   Timer:StatementExecute=3328025,
+tomee-1     |   Timer:QueryPreparation=66292,
+tomee-1     |   time/object=4272158,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE RESTO ADD CONSTRAINT FK_RESTO_corso_laurea_id FOREIGN KEY (corso_laurea_id) REFERENCES CORSOLAUREA (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.518--ServerSession(2135059933)--Connection(387505776)--Thread(Thread[#1,main,5,main])--ALTER TABLE RESTO ADD CONSTRAINT FK_RESTO_corso_laurea_id FOREIGN KEY (corso_laurea_id) REFERENCES CORSOLAUREA (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4817418,
+tomee-1     |   local time=4817418,
+tomee-1     |   profiling time=170322,
+tomee-1     |   Timer:Logging=119827,
+tomee-1     |   Timer:SqlPrepare=98982,
+tomee-1     |   Timer:ConnectionManagement=219650,
+tomee-1     |   Timer:StatementExecute=4126795,
+tomee-1     |   Timer:QueryPreparation=31200,
+tomee-1     |   time/object=4817418,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE ACCADEMICO ADD CONSTRAINT FK_ACCADEMICO_corso_laurea_id FOREIGN KEY (corso_laurea_id) REFERENCES CORSOLAUREA (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.523--ServerSession(2135059933)--Connection(1811698326)--Thread(Thread[#1,main,5,main])--ALTER TABLE ACCADEMICO ADD CONSTRAINT FK_ACCADEMICO_corso_laurea_id FOREIGN KEY (corso_laurea_id) REFERENCES CORSOLAUREA (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4112228,
+tomee-1     |   local time=4112228,
+tomee-1     |   profiling time=118655,
+tomee-1     |   Timer:Logging=120885,
+tomee-1     |   Timer:SqlPrepare=100217,
+tomee-1     |   Timer:ConnectionManagement=174108,
+tomee-1     |   Timer:StatementExecute=3428488,
+tomee-1     |   Timer:QueryPreparation=59454,
+tomee-1     |   time/object=4112228,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE docenti ADD CONSTRAINT FK_docenti_MATRICOLA FOREIGN KEY (MATRICOLA) REFERENCES ACCADEMICO (MATRICOLA)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.528--ServerSession(2135059933)--Connection(1098082328)--Thread(Thread[#1,main,5,main])--ALTER TABLE docenti ADD CONSTRAINT FK_docenti_MATRICOLA FOREIGN KEY (MATRICOLA) REFERENCES ACCADEMICO (MATRICOLA)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=10161218,
+tomee-1     |   local time=10161218,
+tomee-1     |   profiling time=117293,
+tomee-1     |   Timer:Logging=182648,
+tomee-1     |   Timer:SqlPrepare=129899,
+tomee-1     |   Timer:ConnectionManagement=374460,
+tomee-1     |   Timer:StatementExecute=9143279,
+tomee-1     |   Timer:QueryPreparation=32990,
+tomee-1     |   time/object=10161218,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE coordinatori ADD CONSTRAINT FK_coordinatori_MATRICOLA FOREIGN KEY (MATRICOLA) REFERENCES ACCADEMICO (MATRICOLA)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.538--ServerSession(2135059933)--Connection(1165836116)--Thread(Thread[#1,main,5,main])--ALTER TABLE coordinatori ADD CONSTRAINT FK_coordinatori_MATRICOLA FOREIGN KEY (MATRICOLA) REFERENCES ACCADEMICO (MATRICOLA)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2824889,
+tomee-1     |   local time=2824889,
+tomee-1     |   profiling time=81164,
+tomee-1     |   Timer:Logging=109648,
+tomee-1     |   Timer:SqlPrepare=115341,
+tomee-1     |   Timer:ConnectionManagement=146565,
+tomee-1     |   Timer:StatementExecute=2211118,
+tomee-1     |   Timer:QueryPreparation=27984,
+tomee-1     |   time/object=2824889,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE studenti ADD CONSTRAINT FK_studenti_MATRICOLA FOREIGN KEY (MATRICOLA) REFERENCES ACCADEMICO (MATRICOLA)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.541--ServerSession(2135059933)--Connection(340234965)--Thread(Thread[#1,main,5,main])--ALTER TABLE studenti ADD CONSTRAINT FK_studenti_MATRICOLA FOREIGN KEY (MATRICOLA) REFERENCES ACCADEMICO (MATRICOLA)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2308968,
+tomee-1     |   local time=2308968,
+tomee-1     |   profiling time=72640,
+tomee-1     |   Timer:Logging=83418,
+tomee-1     |   Timer:SqlPrepare=98425,
+tomee-1     |   Timer:ConnectionManagement=133511,
+tomee-1     |   Timer:StatementExecute=1759693,
+tomee-1     |   Timer:QueryPreparation=33882,
+tomee-1     |   time/object=2308968,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE studenti ADD CONSTRAINT FK_studenti_resto FOREIGN KEY (resto) REFERENCES RESTO (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.544--ServerSession(2135059933)--Connection(497424937)--Thread(Thread[#1,main,5,main])--ALTER TABLE studenti ADD CONSTRAINT FK_studenti_resto FOREIGN KEY (resto) REFERENCES RESTO (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3060958,
+tomee-1     |   local time=3060958,
+tomee-1     |   profiling time=108783,
+tomee-1     |   Timer:Logging=319509,
+tomee-1     |   Timer:SqlPrepare=114621,
+tomee-1     |   Timer:ConnectionManagement=167555,
+tomee-1     |   Timer:StatementExecute=2102810,
+tomee-1     |   Timer:QueryPreparation=31400,
+tomee-1     |   time/object=3060958,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE corso_laurea_anno_didattico ADD CONSTRAINT FK_corso_laurea_anno_didattico_anno_didattico_id FOREIGN KEY (anno_didattico_id) REFERENCES anni (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.548--ServerSession(2135059933)--Connection(1204785709)--Thread(Thread[#1,main,5,main])--ALTER TABLE corso_laurea_anno_didattico ADD CONSTRAINT FK_corso_laurea_anno_didattico_anno_didattico_id FOREIGN KEY (anno_didattico_id) REFERENCES anni (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3055009,
+tomee-1     |   local time=3055009,
+tomee-1     |   profiling time=105335,
+tomee-1     |   Timer:Logging=158138,
+tomee-1     |   Timer:SqlPrepare=129849,
+tomee-1     |   Timer:ConnectionManagement=174875,
+tomee-1     |   Timer:StatementExecute=2340932,
+tomee-1     |   Timer:QueryPreparation=32558,
+tomee-1     |   time/object=3055009,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE corso_laurea_anno_didattico ADD CONSTRAINT FK_corso_laurea_anno_didattico_corso_laurea_id FOREIGN KEY (corso_laurea_id) REFERENCES CORSOLAUREA (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.551--ServerSession(2135059933)--Connection(1801753119)--Thread(Thread[#1,main,5,main])--ALTER TABLE corso_laurea_anno_didattico ADD CONSTRAINT FK_corso_laurea_anno_didattico_corso_laurea_id FOREIGN KEY (corso_laurea_id) REFERENCES CORSOLAUREA (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3647055,
+tomee-1     |   local time=3647055,
+tomee-1     |   profiling time=98219,
+tomee-1     |   Timer:Logging=120815,
+tomee-1     |   Timer:SqlPrepare=105495,
+tomee-1     |   Timer:ConnectionManagement=195025,
+tomee-1     |   Timer:StatementExecute=2920886,
+tomee-1     |   Timer:QueryPreparation=68602,
+tomee-1     |   time/object=3647055,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE docente_corso ADD CONSTRAINT FK_docente_corso_corso_id FOREIGN KEY (corso_id) REFERENCES corsi (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.557--ServerSession(2135059933)--Connection(1134388380)--Thread(Thread[#1,main,5,main])--ALTER TABLE docente_corso ADD CONSTRAINT FK_docente_corso_corso_id FOREIGN KEY (corso_id) REFERENCES corsi (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4280686,
+tomee-1     |   local time=4280686,
+tomee-1     |   profiling time=213528,
+tomee-1     |   Timer:Logging=103649,
+tomee-1     |   Timer:SqlPrepare=222552,
+tomee-1     |   Timer:ConnectionManagement=247743,
+tomee-1     |   Timer:StatementExecute=3084671,
+tomee-1     |   Timer:QueryPreparation=36823,
+tomee-1     |   time/object=4280686,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE docente_corso ADD CONSTRAINT FK_docente_corso_docente_id FOREIGN KEY (docente_id) REFERENCES ACCADEMICO (MATRICOLA)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.561--ServerSession(2135059933)--Connection(1850169748)--Thread(Thread[#1,main,5,main])--ALTER TABLE docente_corso ADD CONSTRAINT FK_docente_corso_docente_id FOREIGN KEY (docente_id) REFERENCES ACCADEMICO (MATRICOLA)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=6367272,
+tomee-1     |   local time=6367272,
+tomee-1     |   profiling time=117811,
+tomee-1     |   Timer:Logging=96370,
+tomee-1     |   Timer:SqlPrepare=86487,
+tomee-1     |   Timer:ConnectionManagement=154906,
+tomee-1     |   Timer:StatementExecute=5775368,
+tomee-1     |   Timer:QueryPreparation=34246,
+tomee-1     |   time/object=6367272,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE docente_lezione ADD CONSTRAINT FK_docente_lezione_lezione_id FOREIGN KEY (lezione_id) REFERENCES lezioni (ID)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.568--ServerSession(2135059933)--Connection(1436741771)--Thread(Thread[#1,main,5,main])--ALTER TABLE docente_lezione ADD CONSTRAINT FK_docente_lezione_lezione_id FOREIGN KEY (lezione_id) REFERENCES lezioni (ID)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4219861,
+tomee-1     |   local time=4219861,
+tomee-1     |   profiling time=120446,
+tomee-1     |   Timer:Logging=146797,
+tomee-1     |   Timer:SqlPrepare=141091,
+tomee-1     |   Timer:ConnectionManagement=205685,
+tomee-1     |   Timer:StatementExecute=3445438,
+tomee-1     |   Timer:QueryPreparation=41421,
+tomee-1     |   time/object=4219861,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(sql="ALTER TABLE docente_lezione ADD CONSTRAINT FK_docente_lezione_docente_id FOREIGN KEY (docente_id) REFERENCES ACCADEMICO (MATRICOLA)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.573--ServerSession(2135059933)--Connection(446264394)--Thread(Thread[#1,main,5,main])--ALTER TABLE docente_lezione ADD CONSTRAINT FK_docente_lezione_docente_id FOREIGN KEY (docente_id) REFERENCES ACCADEMICO (MATRICOLA)
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4059285,
+tomee-1     |   local time=4059285,
+tomee-1     |   profiling time=90385,
+tomee-1     |   Timer:Logging=157401,
+tomee-1     |   Timer:SqlPrepare=104723,
+tomee-1     |   Timer:ConnectionManagement=256092,
+tomee-1     |   Timer:StatementExecute=3248295,
+tomee-1     |   Timer:QueryPreparation=35710,
+tomee-1     |   time/object=4059285,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=136120795,
+tomee-1     |   local time=136120795,
+tomee-1     |   Timer:DescriptorEvents=136120795,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=136799223,
+tomee-1     |   local time=136799223,
+tomee-1     |   Timer:Register=136799223,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=32265,
+tomee-1     |   local time=32265,
+tomee-1     |   Timer:DescriptorEvents=32265,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=167846,
+tomee-1     |   local time=167846,
+tomee-1     |   Timer:Register=167846,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=16225,
+tomee-1     |   local time=16225,
+tomee-1     |   Timer:DescriptorEvents=16225,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=20915358,
+tomee-1     |   local time=20915358,
+tomee-1     |   Timer:DescriptorEvents=20915358,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=21101015,
+tomee-1     |   local time=21101015,
+tomee-1     |   Timer:Register=21101015,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=31658,
+tomee-1     |   local time=31658,
+tomee-1     |   Timer:DescriptorEvents=31658,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=98027,
+tomee-1     |   local time=98027,
+tomee-1     |   Timer:Register=98027,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=8450,
+tomee-1     |   local time=8450,
+tomee-1     |   Timer:DescriptorEvents=8450,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=39325,
+tomee-1     |   local time=39325,
+tomee-1     |   Timer:Register=39325,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=54276,
+tomee-1     |   local time=54276,
+tomee-1     |   Timer:Register=54276,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=14106610,
+tomee-1     |   local time=14106610,
+tomee-1     |   Timer:DescriptorEvents=14106610,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=34535,
+tomee-1     |   local time=34535,
+tomee-1     |   Timer:Register=34535,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=6281,
+tomee-1     |   local time=6281,
+tomee-1     |   Timer:Register=6281,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4187,
+tomee-1     |   local time=4187,
+tomee-1     |   Timer:Register=4187,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=14199311,
+tomee-1     |   local time=14199311,
+tomee-1     |   Timer:DescriptorEvents=14199311,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=14397404,
+tomee-1     |   local time=14397404,
+tomee-1     |   Timer:Register=14397404,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=25912,
+tomee-1     |   local time=25912,
+tomee-1     |   Timer:DescriptorEvents=25912,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=95888,
+tomee-1     |   local time=95888,
+tomee-1     |   Timer:Register=95888,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=8476,
+tomee-1     |   local time=8476,
+tomee-1     |   Timer:DescriptorEvents=8476,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=40449,
+tomee-1     |   local time=40449,
+tomee-1     |   Timer:Register=40449,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=60116,
+tomee-1     |   local time=60116,
+tomee-1     |   Timer:Register=60116,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=10983,
+tomee-1     |   local time=10983,
+tomee-1     |   Timer:DescriptorEvents=10983,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=56540,
+tomee-1     |   local time=56540,
+tomee-1     |   Timer:Register=56540,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=7409,
+tomee-1     |   local time=7409,
+tomee-1     |   Timer:Register=7409,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=5074,
+tomee-1     |   local time=5074,
+tomee-1     |   Timer:Register=5074,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4273,
+tomee-1     |   local time=4273,
+tomee-1     |   Timer:Register=4273,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=7016,
+tomee-1     |   local time=7016,
+tomee-1     |   Timer:Register=7016,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=3908,
+tomee-1     |   local time=3908,
+tomee-1     |   Timer:Register=3908,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4250,
+tomee-1     |   local time=4250,
+tomee-1     |   Timer:Register=4250,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=10224929,
+tomee-1     |   local time=10224929,
+tomee-1     |   Timer:DescriptorEvents=10224929,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=10453927,
+tomee-1     |   local time=10453927,
+tomee-1     |   Timer:Register=10453927,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=39977,
+tomee-1     |   local time=39977,
+tomee-1     |   Timer:DescriptorEvents=39977,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=157610,
+tomee-1     |   local time=157610,
+tomee-1     |   Timer:Register=157610,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=15895,
+tomee-1     |   local time=15895,
+tomee-1     |   Timer:DescriptorEvents=15895,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=101992,
+tomee-1     |   local time=101992,
+tomee-1     |   Timer:Register=101992,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=14282,
+tomee-1     |   local time=14282,
+tomee-1     |   Timer:DescriptorEvents=14282,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=82451,
+tomee-1     |   local time=82451,
+tomee-1     |   Timer:Register=82451,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=12856,
+tomee-1     |   local time=12856,
+tomee-1     |   Timer:DescriptorEvents=12856,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=63337,
+tomee-1     |   local time=63337,
+tomee-1     |   Timer:Register=63337,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=18220172,
+tomee-1     |   local time=18220172,
+tomee-1     |   Timer:DescriptorEvents=18220172,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=28432,
+tomee-1     |   local time=28432,
+tomee-1     |   Timer:Register=28432,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=134188,
+tomee-1     |   local time=134188,
+tomee-1     |   Timer:Register=134188,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=32067,
+tomee-1     |   local time=32067,
+tomee-1     |   Timer:DescriptorEvents=32067,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=10846,
+tomee-1     |   local time=10846,
+tomee-1     |   Timer:Register=10846,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=61567,
+tomee-1     |   local time=61567,
+tomee-1     |   Timer:Register=61567,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=15399,
+tomee-1     |   local time=15399,
+tomee-1     |   Timer:DescriptorEvents=15399,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=8148,
+tomee-1     |   local time=8148,
+tomee-1     |   Timer:Register=8148,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=42405,
+tomee-1     |   local time=42405,
+tomee-1     |   Timer:Register=42405,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=14746,
+tomee-1     |   local time=14746,
+tomee-1     |   Timer:DescriptorEvents=14746,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=8317,
+tomee-1     |   local time=8317,
+tomee-1     |   Timer:Register=8317,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=41081,
+tomee-1     |   local time=41081,
+tomee-1     |   Timer:Register=41081,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=13818,
+tomee-1     |   local time=13818,
+tomee-1     |   Timer:DescriptorEvents=13818,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=7790,
+tomee-1     |   local time=7790,
+tomee-1     |   Timer:Register=7790,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=38411,
+tomee-1     |   local time=38411,
+tomee-1     |   Timer:Register=38411,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=15229,
+tomee-1     |   local time=15229,
+tomee-1     |   Timer:DescriptorEvents=15229,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=9629,
+tomee-1     |   local time=9629,
+tomee-1     |   Timer:Register=9629,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=56149,
+tomee-1     |   local time=56149,
+tomee-1     |   Timer:Register=56149,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=22679,
+tomee-1     |   local time=22679,
+tomee-1     |   Timer:DescriptorEvents=22679,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=23909,
+tomee-1     |   local time=23909,
+tomee-1     |   Timer:DescriptorEvents=23909,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=11552,
+tomee-1     |   local time=11552,
+tomee-1     |   Timer:DescriptorEvents=11552,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=5734,
+tomee-1     |   local time=5734,
+tomee-1     |   Timer:DescriptorEvents=5734,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4430,
+tomee-1     |   local time=4430,
+tomee-1     |   Timer:DescriptorEvents=4430,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4325,
+tomee-1     |   local time=4325,
+tomee-1     |   Timer:DescriptorEvents=4325,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4989,
+tomee-1     |   local time=4989,
+tomee-1     |   Timer:DescriptorEvents=4989,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4091,
+tomee-1     |   local time=4091,
+tomee-1     |   Timer:DescriptorEvents=4091,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=3892,
+tomee-1     |   local time=3892,
+tomee-1     |   Timer:DescriptorEvents=3892,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=16926,
+tomee-1     |   local time=16926,
+tomee-1     |   Timer:DescriptorEvents=16926,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=6962,
+tomee-1     |   local time=6962,
+tomee-1     |   Timer:DescriptorEvents=6962,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4818,
+tomee-1     |   local time=4818,
+tomee-1     |   Timer:DescriptorEvents=4818,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=5650,
+tomee-1     |   local time=5650,
+tomee-1     |   Timer:DescriptorEvents=5650,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4618,
+tomee-1     |   local time=4618,
+tomee-1     |   Timer:DescriptorEvents=4618,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4662,
+tomee-1     |   local time=4662,
+tomee-1     |   Timer:DescriptorEvents=4662,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4530,
+tomee-1     |   local time=4530,
+tomee-1     |   Timer:DescriptorEvents=4530,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=5387,
+tomee-1     |   local time=5387,
+tomee-1     |   Timer:DescriptorEvents=5387,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4779,
+tomee-1     |   local time=4779,
+tomee-1     |   Timer:DescriptorEvents=4779,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=5384,
+tomee-1     |   local time=5384,
+tomee-1     |   Timer:DescriptorEvents=5384,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=14213,
+tomee-1     |   local time=14213,
+tomee-1     |   Timer:DescriptorEvents=14213,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=10479,
+tomee-1     |   local time=10479,
+tomee-1     |   Timer:DescriptorEvents=10479,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4523,
+tomee-1     |   local time=4523,
+tomee-1     |   Timer:DescriptorEvents=4523,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4140,
+tomee-1     |   local time=4140,
+tomee-1     |   Timer:DescriptorEvents=4140,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=3564,
+tomee-1     |   local time=3564,
+tomee-1     |   Timer:DescriptorEvents=3564,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4195,
+tomee-1     |   local time=4195,
+tomee-1     |   Timer:DescriptorEvents=4195,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=7547,
+tomee-1     |   local time=7547,
+tomee-1     |   Timer:DescriptorEvents=7547,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=17255,
+tomee-1     |   local time=17255,
+tomee-1     |   Timer:DescriptorEvents=17255,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4714,
+tomee-1     |   local time=4714,
+tomee-1     |   Timer:DescriptorEvents=4714,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2968,
+tomee-1     |   local time=2968,
+tomee-1     |   Timer:DescriptorEvents=2968,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2480,
+tomee-1     |   local time=2480,
+tomee-1     |   Timer:DescriptorEvents=2480,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=14917,
+tomee-1     |   local time=14917,
+tomee-1     |   Timer:DescriptorEvents=14917,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2509,
+tomee-1     |   local time=2509,
+tomee-1     |   Timer:DescriptorEvents=2509,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2653,
+tomee-1     |   local time=2653,
+tomee-1     |   Timer:DescriptorEvents=2653,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2510,
+tomee-1     |   local time=2510,
+tomee-1     |   Timer:DescriptorEvents=2510,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2739,
+tomee-1     |   local time=2739,
+tomee-1     |   Timer:DescriptorEvents=2739,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2688,
+tomee-1     |   local time=2688,
+tomee-1     |   Timer:DescriptorEvents=2688,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2355,
+tomee-1     |   local time=2355,
+tomee-1     |   Timer:DescriptorEvents=2355,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2071,
+tomee-1     |   local time=2071,
+tomee-1     |   Timer:DescriptorEvents=2071,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=3028,
+tomee-1     |   local time=3028,
+tomee-1     |   Timer:DescriptorEvents=3028,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2595,
+tomee-1     |   local time=2595,
+tomee-1     |   Timer:DescriptorEvents=2595,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4217,
+tomee-1     |   local time=4217,
+tomee-1     |   Timer:DescriptorEvents=4217,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=6586,
+tomee-1     |   local time=6586,
+tomee-1     |   Timer:DescriptorEvents=6586,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2875,
+tomee-1     |   local time=2875,
+tomee-1     |   Timer:DescriptorEvents=2875,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=3007,
+tomee-1     |   local time=3007,
+tomee-1     |   Timer:DescriptorEvents=3007,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=1168500,
+tomee-1     |   local time=1168500,
+tomee-1     |   Timer:SqlGeneration=1168500,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2374485,
+tomee-1     |   local time=2374485,
+tomee-1     |   Timer:QueryPreparation=2374485,
+tomee-1     | )
+tomee-1     | Begin profile of{InsertObjectQuery(CorsoLaurea{id=null, nome='Informatica'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.849--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO CORSOLAUREA (NOME) VALUES (?)
+tomee-1     |   bind => [Informatica]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.868--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=15275671,
+tomee-1     |           local time=15275671,
+tomee-1     |           profiling time=301309,
+tomee-1     |           Timer:QueryPreparation=67293,
+tomee-1     |           Timer:SqlPrepare=159332,
+tomee-1     |           Timer:Logging=137757,
+tomee-1     |           Timer:StatementExecute=8891750,
+tomee-1     |           Timer:RowFetch=3760891,
+tomee-1     |           time/object=15275671,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=36167714,
+tomee-1     |   local time=20892043,
+tomee-1     |   profiling time=978648,
+tomee-1     |   Timer:Logging=208465,
+tomee-1     |   Timer:SqlPrepare=12293717,
+tomee-1     |   Timer:ConnectionManagement=118458,
+tomee-1     |   Timer:StatementExecute=5078086,
+tomee-1     |   Timer:DescriptorEvents=35317,
+tomee-1     |   time/object=36167714,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(CorsoLaurea{id=null, nome='Fisica'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.885--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO CORSOLAUREA (NOME) VALUES (?)
+tomee-1     |   bind => [Fisica]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.886--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=795770,
+tomee-1     |           local time=795770,
+tomee-1     |           profiling time=142174,
+tomee-1     |           Timer:Logging=95994,
+tomee-1     |           Timer:SqlPrepare=90983,
+tomee-1     |           Timer:StatementExecute=429644,
+tomee-1     |           Timer:RowFetch=64550,
+tomee-1     |           time/object=795770,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=1922916,
+tomee-1     |   local time=1127146,
+tomee-1     |   profiling time=334856,
+tomee-1     |   Timer:Logging=119882,
+tomee-1     |   Timer:SqlPrepare=151026,
+tomee-1     |   Timer:StatementExecute=469278,
+tomee-1     |   Timer:DescriptorEvents=19945,
+tomee-1     |   time/object=1922916,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=56506,
+tomee-1     |   local time=56506,
+tomee-1     |   Timer:SqlGeneration=56506,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=159704,
+tomee-1     |   local time=159704,
+tomee-1     |   Timer:QueryPreparation=159704,
+tomee-1     | )
+tomee-1     | Begin profile of{InsertObjectQuery(it.unisa.uniclass.orari.model.Resto@4ef0bc5b)
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.888--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO RESTO (NOME, corso_laurea_id) VALUES (?, ?)
+tomee-1     |   bind => [Resto 0, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.894--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=960942,
+tomee-1     |           local time=960942,
+tomee-1     |           profiling time=176196,
+tomee-1     |           Timer:Logging=130279,
+tomee-1     |           Timer:SqlPrepare=115650,
+tomee-1     |           Timer:StatementExecute=505392,
+tomee-1     |           Timer:RowFetch=70769,
+tomee-1     |           time/object=960942,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=7881230,
+tomee-1     |   local time=6920288,
+tomee-1     |   profiling time=397853,
+tomee-1     |   Timer:Logging=110889,
+tomee-1     |   Timer:SqlPrepare=4172836,
+tomee-1     |   Timer:StatementExecute=2128629,
+tomee-1     |   Timer:DescriptorEvents=21478,
+tomee-1     |   time/object=7881230,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(it.unisa.uniclass.orari.model.Resto@44ba9f25)
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.896--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO RESTO (NOME, corso_laurea_id) VALUES (?, ?)
+tomee-1     |   bind => [Resto 2, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.897--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=1094463,
+tomee-1     |           local time=1094463,
+tomee-1     |           profiling time=120972,
+tomee-1     |           Timer:Logging=91037,
+tomee-1     |           Timer:SqlPrepare=116567,
+tomee-1     |           Timer:StatementExecute=692204,
+tomee-1     |           Timer:RowFetch=77123,
+tomee-1     |           time/object=1094463,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2393680,
+tomee-1     |   local time=1299217,
+tomee-1     |   profiling time=367030,
+tomee-1     |   Timer:Logging=136124,
+tomee-1     |   Timer:SqlPrepare=173143,
+tomee-1     |   Timer:StatementExecute=585969,
+tomee-1     |   Timer:DescriptorEvents=22056,
+tomee-1     |   time/object=2393680,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(it.unisa.uniclass.orari.model.Resto@53202b06)
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.899--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO RESTO (NOME, corso_laurea_id) VALUES (?, ?)
+tomee-1     |   bind => [Resto 1, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.9--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=903242,
+tomee-1     |           local time=903242,
+tomee-1     |           profiling time=136530,
+tomee-1     |           Timer:Logging=114824,
+tomee-1     |           Timer:SqlPrepare=85130,
+tomee-1     |           Timer:StatementExecute=506807,
+tomee-1     |           Timer:RowFetch=69521,
+tomee-1     |           time/object=903242,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2293087,
+tomee-1     |   local time=1389845,
+tomee-1     |   profiling time=446408,
+tomee-1     |   Timer:Logging=103199,
+tomee-1     |   Timer:SqlPrepare=179238,
+tomee-1     |   Timer:StatementExecute=618237,
+tomee-1     |   Timer:DescriptorEvents=36719,
+tomee-1     |   time/object=2293087,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=67029,
+tomee-1     |   local time=67029,
+tomee-1     |   Timer:SqlGeneration=67029,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=247592,
+tomee-1     |   local time=247592,
+tomee-1     |   Timer:QueryPreparation=247592,
+tomee-1     | )
+tomee-1     | Begin profile of{InsertObjectQuery(AnnoDidattico{id=0, anno='Anno 1'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.903--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO anni (ANNO) VALUES (?)
+tomee-1     |   bind => [Anno 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.904--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=864464,
+tomee-1     |           local time=864464,
+tomee-1     |           profiling time=130291,
+tomee-1     |           Timer:Logging=127027,
+tomee-1     |           Timer:SqlPrepare=133896,
+tomee-1     |           Timer:StatementExecute=430990,
+tomee-1     |           Timer:RowFetch=65133,
+tomee-1     |           time/object=864464,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.AnnoDidattico,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2761649,
+tomee-1     |   local time=1897185,
+tomee-1     |   profiling time=564076,
+tomee-1     |   Timer:Logging=72908,
+tomee-1     |   Timer:SqlPrepare=190145,
+tomee-1     |   Timer:StatementExecute=1239567,
+tomee-1     |   Timer:DescriptorEvents=18285,
+tomee-1     |   time/object=2761649,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(AnnoDidattico{id=0, anno='Anno 2'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.906--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO anni (ANNO) VALUES (?)
+tomee-1     |   bind => [Anno 2]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.907--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=3758981,
+tomee-1     |           local time=3758981,
+tomee-1     |           profiling time=147115,
+tomee-1     |           Timer:Logging=93283,
+tomee-1     |           Timer:SqlPrepare=3027794,
+tomee-1     |           Timer:StatementExecute=404053,
+tomee-1     |           Timer:RowFetch=70833,
+tomee-1     |           time/object=3758981,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.AnnoDidattico,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4975741,
+tomee-1     |   local time=1216760,
+tomee-1     |   profiling time=366696,
+tomee-1     |   Timer:Logging=127222,
+tomee-1     |   Timer:SqlPrepare=161854,
+tomee-1     |   Timer:StatementExecute=546891,
+tomee-1     |   Timer:DescriptorEvents=37666,
+tomee-1     |   time/object=4975741,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(AnnoDidattico{id=0, anno='Anno 3'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.911--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO anni (ANNO) VALUES (?)
+tomee-1     |   bind => [Anno 3]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.913--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=949072,
+tomee-1     |           local time=949072,
+tomee-1     |           profiling time=293003,
+tomee-1     |           Timer:Logging=304132,
+tomee-1     |           Timer:SqlPrepare=112490,
+tomee-1     |           Timer:StatementExecute=358163,
+tomee-1     |           Timer:RowFetch=62673,
+tomee-1     |           time/object=949072,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.AnnoDidattico,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2409221,
+tomee-1     |   local time=1460149,
+tomee-1     |   profiling time=516721,
+tomee-1     |   Timer:Logging=125631,
+tomee-1     |   Timer:SqlPrepare=192218,
+tomee-1     |   Timer:StatementExecute=561136,
+tomee-1     |   Timer:DescriptorEvents=20634,
+tomee-1     |   time/object=2409221,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=39603,
+tomee-1     |   local time=39603,
+tomee-1     |   Timer:SqlGeneration=39603,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=149295,
+tomee-1     |   local time=149295,
+tomee-1     |   Timer:QueryPreparation=149295,
+tomee-1     | )
+tomee-1     | Begin profile of{InsertObjectQuery(Corso{id=null, corsoLaurea=CorsoLaurea{id=1, nome='Informatica'}, docenti=[], nome='Ingegneria del Software'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.915--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO corsi (NOME, anno_didattico_id, corso_laurea_id) VALUES (?, ?, ?)
+tomee-1     |   bind => [Ingegneria del Software, 3, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.92--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=740866,
+tomee-1     |           local time=740866,
+tomee-1     |           profiling time=188441,
+tomee-1     |           Timer:Logging=154899,
+tomee-1     |           Timer:SqlPrepare=109171,
+tomee-1     |           Timer:StatementExecute=294541,
+tomee-1     |           Timer:RowFetch=59913,
+tomee-1     |           time/object=740866,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Corso,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=5906678,
+tomee-1     |   local time=5165812,
+tomee-1     |   profiling time=726735,
+tomee-1     |   Timer:Logging=94203,
+tomee-1     |   Timer:SqlPrepare=2527504,
+tomee-1     |   Timer:StatementExecute=2048434,
+tomee-1     |   Timer:DescriptorEvents=23168,
+tomee-1     |   time/object=5906678,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Corso{id=null, corsoLaurea=CorsoLaurea{id=1, nome='Informatica'}, docenti=[], nome='Programmazione Distribuita'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.921--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO corsi (NOME, anno_didattico_id, corso_laurea_id) VALUES (?, ?, ?)
+tomee-1     |   bind => [Programmazione Distribuita, 3, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.924--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=893527,
+tomee-1     |           local time=893527,
+tomee-1     |           profiling time=178110,
+tomee-1     |           Timer:Logging=142961,
+tomee-1     |           Timer:SqlPrepare=116683,
+tomee-1     |           Timer:StatementExecute=418927,
+tomee-1     |           Timer:RowFetch=69695,
+tomee-1     |           time/object=893527,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Corso,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3857946,
+tomee-1     |   local time=2964419,
+tomee-1     |   profiling time=377497,
+tomee-1     |   Timer:Logging=100271,
+tomee-1     |   Timer:SqlPrepare=1551706,
+tomee-1     |   Timer:StatementExecute=863457,
+tomee-1     |   Timer:DescriptorEvents=25094,
+tomee-1     |   time/object=3857946,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Corso{id=null, corsoLaurea=CorsoLaurea{id=1, nome='Informatica'}, docenti=[], nome='Fondamenti di Intelligenza Artificiale'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.926--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO corsi (NOME, anno_didattico_id, corso_laurea_id) VALUES (?, ?, ?)
+tomee-1     |   bind => [Fondamenti di Intelligenza Artificiale, 3, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.927--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=685593,
+tomee-1     |           local time=685593,
+tomee-1     |           profiling time=112147,
+tomee-1     |           Timer:Logging=87681,
+tomee-1     |           Timer:SqlPrepare=77881,
+tomee-1     |           Timer:StatementExecute=296551,
+tomee-1     |           Timer:RowFetch=83302,
+tomee-1     |           time/object=685593,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Corso,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=1809124,
+tomee-1     |   local time=1123531,
+tomee-1     |   profiling time=321123,
+tomee-1     |   Timer:Logging=124229,
+tomee-1     |   Timer:SqlPrepare=170501,
+tomee-1     |   Timer:StatementExecute=500852,
+tomee-1     |   Timer:DescriptorEvents=22699,
+tomee-1     |   time/object=1809124,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=59767,
+tomee-1     |   local time=59767,
+tomee-1     |   Timer:SqlGeneration=59767,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=174168,
+tomee-1     |   local time=174168,
+tomee-1     |   Timer:QueryPreparation=174168,
+tomee-1     | )
+tomee-1     | Begin profile of{InsertObjectQuery(Aula{id=0, edificio='P', nome='P2'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.932--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO aule (EDIFICIO, NOME) VALUES (?, ?)
+tomee-1     |   bind => [P, P2]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.935--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=843024,
+tomee-1     |           local time=843024,
+tomee-1     |           profiling time=167867,
+tomee-1     |           Timer:Logging=135187,
+tomee-1     |           Timer:SqlPrepare=114655,
+tomee-1     |           Timer:StatementExecute=395646,
+tomee-1     |           Timer:RowFetch=67684,
+tomee-1     |           time/object=843024,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3204732,
+tomee-1     |   local time=2361708,
+tomee-1     |   profiling time=4530015,
+tomee-1     |   Timer:Logging=125613,
+tomee-1     |   Timer:SqlPrepare=288681,
+tomee-1     |   Timer:StatementExecute=1414565,
+tomee-1     |   Timer:DescriptorEvents=73991,
+tomee-1     |   time/object=3204732,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Aula{id=0, edificio='F', nome='F1'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.936--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO aule (EDIFICIO, NOME) VALUES (?, ?)
+tomee-1     |   bind => [F, F1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.937--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=697951,
+tomee-1     |           local time=697951,
+tomee-1     |           profiling time=113827,
+tomee-1     |           Timer:Logging=87313,
+tomee-1     |           Timer:SqlPrepare=89976,
+tomee-1     |           Timer:StatementExecute=342555,
+tomee-1     |           Timer:RowFetch=71060,
+tomee-1     |           time/object=697951,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=1803164,
+tomee-1     |   local time=1105213,
+tomee-1     |   profiling time=355774,
+tomee-1     |   Timer:Logging=91006,
+tomee-1     |   Timer:SqlPrepare=194136,
+tomee-1     |   Timer:StatementExecute=523119,
+tomee-1     |   Timer:DescriptorEvents=17936,
+tomee-1     |   time/object=1803164,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Aula{id=0, edificio='F', nome='F3'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.938--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO aule (EDIFICIO, NOME) VALUES (?, ?)
+tomee-1     |   bind => [F, F3]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.94--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=3297255,
+tomee-1     |           local time=3297255,
+tomee-1     |           profiling time=514553,
+tomee-1     |           Timer:Logging=124493,
+tomee-1     |           Timer:SqlPrepare=119129,
+tomee-1     |           Timer:StatementExecute=2808848,
+tomee-1     |           Timer:RowFetch=73905,
+tomee-1     |           time/object=3297255,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4497427,
+tomee-1     |   local time=1200172,
+tomee-1     |   profiling time=749784,
+tomee-1     |   Timer:Logging=102688,
+tomee-1     |   Timer:SqlPrepare=125995,
+tomee-1     |   Timer:StatementExecute=660473,
+tomee-1     |   Timer:DescriptorEvents=18942,
+tomee-1     |   time/object=4497427,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Aula{id=0, edificio='P', nome='P1'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.944--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO aule (EDIFICIO, NOME) VALUES (?, ?)
+tomee-1     |   bind => [P, P1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.945--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=682426,
+tomee-1     |           local time=682426,
+tomee-1     |           profiling time=148528,
+tomee-1     |           Timer:Logging=85418,
+tomee-1     |           Timer:SqlPrepare=82952,
+tomee-1     |           Timer:StatementExecute=336586,
+tomee-1     |           Timer:RowFetch=68458,
+tomee-1     |           time/object=682426,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=1926120,
+tomee-1     |   local time=1243694,
+tomee-1     |   profiling time=359287,
+tomee-1     |   Timer:Logging=130508,
+tomee-1     |   Timer:SqlPrepare=129357,
+tomee-1     |   Timer:StatementExecute=635771,
+tomee-1     |   Timer:DescriptorEvents=18106,
+tomee-1     |   time/object=1926120,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Aula{id=0, edificio='F', nome='F2'})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.946--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO aule (EDIFICIO, NOME) VALUES (?, ?)
+tomee-1     |   bind => [F, F2]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.947--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=908302,
+tomee-1     |           local time=908302,
+tomee-1     |           profiling time=112205,
+tomee-1     |           Timer:Logging=117414,
+tomee-1     |           Timer:SqlPrepare=167714,
+tomee-1     |           Timer:StatementExecute=416680,
+tomee-1     |           Timer:RowFetch=72288,
+tomee-1     |           time/object=908302,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=1912555,
+tomee-1     |   local time=1004253,
+tomee-1     |   profiling time=329695,
+tomee-1     |   Timer:Logging=88830,
+tomee-1     |   Timer:SqlPrepare=121375,
+tomee-1     |   Timer:StatementExecute=509130,
+tomee-1     |   Timer:DescriptorEvents=18708,
+tomee-1     |   time/object=1912555,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=42662,
+tomee-1     |   local time=42662,
+tomee-1     |   Timer:SqlGeneration=42662,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=171150,
+tomee-1     |   local time=171150,
+tomee-1     |   Timer:QueryPreparation=171150,
+tomee-1     | )
+tomee-1     | Begin profile of{InsertObjectQuery(Lezione{id=null, semestre=1, oraInizio=13:30:00, oraFine=15:30:00, giorno=GIOVEDI, corso=Corso{id=3, corsoLaurea=CorsoLaurea{id=1, nome='Informatica'}, docenti=[], nome='Fondamenti di Intelligenza Artificiale'}, resto=it.unisa.uniclass.orari.model.Resto@4ef0bc5b, aula=Aula{id=1, edificio='P', nome='P2'}})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.953--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO lezioni (GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id) VALUES (?, ?, ?, ?, ?, ?, ?)
+tomee-1     |   bind => [GIOVEDI, 15:30:00, 13:30:00, 1, 1, 3, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.958--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=930134,
+tomee-1     |           local time=930134,
+tomee-1     |           profiling time=383984,
+tomee-1     |           Timer:Logging=167508,
+tomee-1     |           Timer:SqlPrepare=101575,
+tomee-1     |           Timer:StatementExecute=372283,
+tomee-1     |           Timer:RowFetch=58884,
+tomee-1     |           time/object=930134,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=5814485,
+tomee-1     |   local time=4884351,
+tomee-1     |   profiling time=4779723,
+tomee-1     |   Timer:Logging=130428,
+tomee-1     |   Timer:SqlPrepare=2551955,
+tomee-1     |   Timer:StatementExecute=1681739,
+tomee-1     |   Timer:DescriptorEvents=30191,
+tomee-1     |   time/object=5814485,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Lezione{id=null, semestre=1, oraInizio=14:30:00, oraFine=17:30:00, giorno=LUNEDI, corso=Corso{id=2, corsoLaurea=CorsoLaurea{id=1, nome='Informatica'}, docenti=[], nome='Programmazione Distribuita'}, resto=it.unisa.uniclass.orari.model.Resto@4ef0bc5b, aula=Aula{id=2, edificio='F', nome='F1'}})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.96--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO lezioni (GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id) VALUES (?, ?, ?, ?, ?, ?, ?)
+tomee-1     |   bind => [LUNEDI, 17:30:00, 14:30:00, 1, 2, 2, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.961--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=755151,
+tomee-1     |           local time=755151,
+tomee-1     |           profiling time=119006,
+tomee-1     |           Timer:Logging=135921,
+tomee-1     |           Timer:SqlPrepare=89090,
+tomee-1     |           Timer:StatementExecute=333423,
+tomee-1     |           Timer:RowFetch=63221,
+tomee-1     |           time/object=755151,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2411854,
+tomee-1     |   local time=1656703,
+tomee-1     |   profiling time=414848,
+tomee-1     |   Timer:Logging=157076,
+tomee-1     |   Timer:SqlPrepare=267032,
+tomee-1     |   Timer:StatementExecute=841859,
+tomee-1     |   Timer:DescriptorEvents=18917,
+tomee-1     |   time/object=2411854,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Lezione{id=null, semestre=1, oraInizio=11:00:00, oraFine=14:00:00, giorno=LUNEDI, corso=Corso{id=1, corsoLaurea=CorsoLaurea{id=1, nome='Informatica'}, docenti=[], nome='Ingegneria del Software'}, resto=it.unisa.uniclass.orari.model.Resto@4ef0bc5b, aula=Aula{id=2, edificio='F', nome='F1'}})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.963--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO lezioni (GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id) VALUES (?, ?, ?, ?, ?, ?, ?)
+tomee-1     |   bind => [LUNEDI, 14:00:00, 11:00:00, 1, 2, 1, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.964--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=1061207,
+tomee-1     |           local time=1061207,
+tomee-1     |           profiling time=132521,
+tomee-1     |           Timer:Logging=136064,
+tomee-1     |           Timer:SqlPrepare=88827,
+tomee-1     |           Timer:StatementExecute=595878,
+tomee-1     |           Timer:RowFetch=69394,
+tomee-1     |           time/object=1061207,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2872665,
+tomee-1     |   local time=1811458,
+tomee-1     |   profiling time=410421,
+tomee-1     |   Timer:Logging=176811,
+tomee-1     |   Timer:SqlPrepare=282283,
+tomee-1     |   Timer:StatementExecute=864070,
+tomee-1     |   Timer:DescriptorEvents=26713,
+tomee-1     |   time/object=2872665,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Lezione{id=null, semestre=1, oraInizio=13:30:00, oraFine=15:30:00, giorno=MARTEDI, corso=Corso{id=3, corsoLaurea=CorsoLaurea{id=1, nome='Informatica'}, docenti=[], nome='Fondamenti di Intelligenza Artificiale'}, resto=it.unisa.uniclass.orari.model.Resto@4ef0bc5b, aula=Aula{id=4, edificio='P', nome='P1'}})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.966--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO lezioni (GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id) VALUES (?, ?, ?, ?, ?, ?, ?)
+tomee-1     |   bind => [MARTEDI, 15:30:00, 13:30:00, 1, 4, 3, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.968--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=819784,
+tomee-1     |           local time=819784,
+tomee-1     |           profiling time=123896,
+tomee-1     |           Timer:Logging=129875,
+tomee-1     |           Timer:SqlPrepare=112175,
+tomee-1     |           Timer:StatementExecute=390584,
+tomee-1     |           Timer:RowFetch=68477,
+tomee-1     |           time/object=819784,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2465640,
+tomee-1     |   local time=1645856,
+tomee-1     |   profiling time=471171,
+tomee-1     |   Timer:Logging=207730,
+tomee-1     |   Timer:SqlPrepare=288804,
+tomee-1     |   Timer:StatementExecute=702810,
+tomee-1     |   Timer:DescriptorEvents=23688,
+tomee-1     |   time/object=2465640,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Lezione{id=null, semestre=1, oraInizio=11:00:00, oraFine=13:00:00, giorno=VENERDI, corso=Corso{id=1, corsoLaurea=CorsoLaurea{id=1, nome='Informatica'}, docenti=[], nome='Ingegneria del Software'}, resto=it.unisa.uniclass.orari.model.Resto@4ef0bc5b, aula=Aula{id=3, edificio='F', nome='F3'}})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.969--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO lezioni (GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id) VALUES (?, ?, ?, ?, ?, ?, ?)
+tomee-1     |   bind => [VENERDI, 13:00:00, 11:00:00, 1, 3, 1, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.972--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=772144,
+tomee-1     |           local time=772144,
+tomee-1     |           profiling time=167075,
+tomee-1     |           Timer:Logging=108665,
+tomee-1     |           Timer:SqlPrepare=99587,
+tomee-1     |           Timer:StatementExecute=329573,
+tomee-1     |           Timer:RowFetch=72560,
+tomee-1     |           time/object=772144,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3678292,
+tomee-1     |   local time=2906148,
+tomee-1     |   profiling time=525861,
+tomee-1     |   Timer:Logging=174558,
+tomee-1     |   Timer:SqlPrepare=274719,
+tomee-1     |   Timer:StatementExecute=1944274,
+tomee-1     |   Timer:DescriptorEvents=35938,
+tomee-1     |   time/object=3678292,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{InsertObjectQuery(Lezione{id=null, semestre=1, oraInizio=09:00:00, oraFine=11:00:00, giorno=GIOVEDI, corso=Corso{id=1, corsoLaurea=CorsoLaurea{id=1, nome='Informatica'}, docenti=[], nome='Ingegneria del Software'}, resto=it.unisa.uniclass.orari.model.Resto@4ef0bc5b, aula=Aula{id=5, edificio='F', nome='F2'}})
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.974--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO lezioni (GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id) VALUES (?, ?, ?, ?, ?, ?, ?)
+tomee-1     |   bind => [GIOVEDI, 11:00:00, 09:00:00, 1, 5, 1, 1]
+tomee-1     |   Begin profile of{ValueReadQuery(name="SEQ_GEN_IDENTITY" sql="select lastval()")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.976--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--select lastval()
+tomee-1     |   Profile(ValueReadQuery,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=974321,
+tomee-1     |           local time=974321,
+tomee-1     |           profiling time=165590,
+tomee-1     |           Timer:Logging=223841,
+tomee-1     |           Timer:SqlPrepare=128234,
+tomee-1     |           Timer:StatementExecute=429358,
+tomee-1     |           Timer:RowFetch=66412,
+tomee-1     |           time/object=974321,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(InsertObjectQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2981484,
+tomee-1     |   local time=2007163,
+tomee-1     |   profiling time=472689,
+tomee-1     |   Timer:Logging=214555,
+tomee-1     |   Timer:SqlPrepare=298704,
+tomee-1     |   Timer:StatementExecute=1004647,
+tomee-1     |   Timer:DescriptorEvents=22354,
+tomee-1     |   time/object=2981484,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(name="anniDidattici" )
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.978--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO corso_laurea_anno_didattico (anno_didattico_id, corso_laurea_id) VALUES (?, ?)
+tomee-1     |   bind => [1, 1]
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3138425,
+tomee-1     |   local time=3138425,
+tomee-1     |   profiling time=150555,
+tomee-1     |   Timer:Logging=150635,
+tomee-1     |   Timer:SqlGeneration=42495,
+tomee-1     |   Timer:SqlPrepare=239364,
+tomee-1     |   Timer:StatementExecute=1512761,
+tomee-1     |   Timer:QueryPreparation=95311,
+tomee-1     |   time/object=3138425,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(name="anniDidattici" sql="INSERT INTO corso_laurea_anno_didattico (anno_didattico_id, corso_laurea_id) VALUES (?, ?)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.981--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO corso_laurea_anno_didattico (anno_didattico_id, corso_laurea_id) VALUES (?, ?)
+tomee-1     |   bind => [2, 1]
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=1128650,
+tomee-1     |   local time=1128650,
+tomee-1     |   profiling time=104875,
+tomee-1     |   Timer:Logging=203647,
+tomee-1     |   Timer:SqlPrepare=141430,
+tomee-1     |   Timer:StatementExecute=621661,
+tomee-1     |   time/object=1128650,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{DataModifyQuery(name="anniDidattici" sql="INSERT INTO corso_laurea_anno_didattico (anno_didattico_id, corso_laurea_id) VALUES (?, ?)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:40:54.982--ClientSession(270945456)--Connection(600865491)--Thread(Thread[#1,main,5,main])--INSERT INTO corso_laurea_anno_didattico (anno_didattico_id, corso_laurea_id) VALUES (?, ?)
+tomee-1     |   bind => [3, 1]
+tomee-1     | Profile(DataModifyQuery,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=907508,
+tomee-1     |   local time=907508,
+tomee-1     |   profiling time=76474,
+tomee-1     |   Timer:Logging=67644,
+tomee-1     |   Timer:SqlPrepare=139989,
+tomee-1     |   Timer:StatementExecute=594010,
+tomee-1     |   time/object=907508,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=10809,
+tomee-1     |   local time=10809,
+tomee-1     |   Timer:UnitOfWorkCommit=10809,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=598448,
+tomee-1     |   local time=598448,
+tomee-1     |   Timer:TXBeforeCompletion=598448,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=239431,
+tomee-1     |   local time=239431,
+tomee-1     |   Timer:TXAfterCompletion=239431,
+tomee-1     | )
+tomee-1     | 05-Jan-2026 10:40:54.996 INFO [main] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=DatabasePopulator, ejb-name=DatabasePopulator, container=Default Singleton Container)
+tomee-1     | 05-Jan-2026 10:40:55.012 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/usr/local/tomee/webapps/UniClass-Dependability)
+tomee-1     | 05-Jan-2026 10:40:55.237 INFO [main] org.apache.myfaces.webapp.MyFacesContainerInitializer.onStartup Using org.apache.myfaces.webapp.MyFacesContainerInitializer
+tomee-1     | 05-Jan-2026 10:40:55.259 INFO [main] org.apache.myfaces.webapp.MyFacesContainerInitializer.onStartup Added FacesServlet with mappings=[/faces/*, *.jsf, *.faces, *.xhtml]
+tomee-1     | 05-Jan-2026 10:40:55.284 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+tomee-1     | 05-Jan-2026 10:40:55.289 INFO [main] org.apache.tomee.myfaces.TomEEMyFacesContainerInitializer.addListener Installing <listener>org.apache.myfaces.webapp.StartupServletContextListener</listener>
+tomee-1     | 05-Jan-2026 10:40:55.552 INFO [main] org.apache.myfaces.util.ExternalSpecifications.lambda$static$1 MyFaces Core CDI support enabled
+tomee-1     | 05-Jan-2026 10:40:55.585 INFO [main] org.apache.myfaces.util.ExternalSpecifications.lambda$static$0 MyFaces Core Bean Validation support enabled
+tomee-1     | 05-Jan-2026 10:40:55.615 INFO [main] org.apache.myfaces.application.ApplicationImpl.getProjectStage Couldn't discover the current project stage, using Production
+tomee-1     | 05-Jan-2026 10:40:55.625 INFO [main] org.apache.myfaces.view.facelets.ViewPoolProcessor.initialize org.apache.myfaces.CACHE_EL_EXPRESSIONS web config parameter is set to "noCache". To enable view pooling this param must be set to "alwaysRecompile". View Pooling disabled.
+tomee-1     | 05-Jan-2026 10:40:55.628 INFO [main] org.apache.myfaces.webapp.FacesInitializerImpl.initFaces MyFaces Core has started, it took [330] ms.
+tomee-1     | 05-Jan-2026 10:40:55.664 INFO [main] java.lang.reflect.Method.invoke Deployment of web application archive [/usr/local/tomee/webapps/UniClass-Dependability.war] has finished in [4,749] ms
+tomee-1     | 05-Jan-2026 10:40:55.665 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/usr/local/tomee/webapps/host-manager]
+tomee-1     | 05-Jan-2026 10:40:55.667 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /host-manager
+tomee-1     | 05-Jan-2026 10:40:55.690 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+tomee-1     | 05-Jan-2026 10:40:55.693 WARNING [main] org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal jdbc/DBUniClass resource was defined in both tomcat and tomee so removing tomcat one
+tomee-1     | 05-Jan-2026 10:40:55.694 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /usr/local/tomee/webapps/host-manager
+tomee-1     | 05-Jan-2026 10:40:55.699 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/usr/local/tomee/webapps/host-manager" loaded.
+tomee-1     | 05-Jan-2026 10:40:55.699 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /usr/local/tomee/webapps/host-manager
+tomee-1     | 05-Jan-2026 10:40:55.703 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+tomee-1     | 05-Jan-2026 10:40:55.706 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file /usr/local/tomee/webapps/host-manager/META-INF/context.xml
+tomee-1     | 05-Jan-2026 10:40:55.707 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/usr/local/tomee/webapps/host-manager)
+tomee-1     | 05-Jan-2026 10:40:55.738 INFO [main] org.apache.myfaces.webapp.MyFacesContainerInitializer.onStartup Using org.apache.myfaces.webapp.MyFacesContainerInitializer
+tomee-1     | 05-Jan-2026 10:40:55.781 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+tomee-1     | 05-Jan-2026 10:40:55.794 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/usr/local/tomee/webapps/host-manager] has finished in [129] ms
+tomee-1     | 05-Jan-2026 10:40:55.794 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/usr/local/tomee/webapps/ROOT]
+tomee-1     | 05-Jan-2026 10:40:55.794 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /
+tomee-1     | 05-Jan-2026 10:40:55.806 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+tomee-1     | 05-Jan-2026 10:40:55.809 WARNING [main] org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal jdbc/DBUniClass resource was defined in both tomcat and tomee so removing tomcat one
+tomee-1     | 05-Jan-2026 10:40:55.809 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /usr/local/tomee/webapps/ROOT
+tomee-1     | 05-Jan-2026 10:40:55.812 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/usr/local/tomee/webapps/ROOT" loaded.
+tomee-1     | 05-Jan-2026 10:40:55.813 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /usr/local/tomee/webapps/ROOT
+tomee-1     | 05-Jan-2026 10:40:55.817 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+tomee-1     | 05-Jan-2026 10:40:55.819 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/usr/local/tomee/webapps/ROOT)
+tomee-1     | 05-Jan-2026 10:40:55.843 INFO [main] org.apache.myfaces.webapp.MyFacesContainerInitializer.onStartup Using org.apache.myfaces.webapp.MyFacesContainerInitializer
+tomee-1     | 05-Jan-2026 10:40:55.883 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+tomee-1     | 05-Jan-2026 10:40:55.887 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/usr/local/tomee/webapps/ROOT] has finished in [93] ms
+tomee-1     | 05-Jan-2026 10:40:55.888 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/usr/local/tomee/webapps/manager]
+tomee-1     | 05-Jan-2026 10:40:55.889 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /manager
+tomee-1     | 05-Jan-2026 10:40:55.904 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+tomee-1     | 05-Jan-2026 10:40:55.906 WARNING [main] org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal jdbc/DBUniClass resource was defined in both tomcat and tomee so removing tomcat one
+tomee-1     | 05-Jan-2026 10:40:55.908 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /usr/local/tomee/webapps/manager
+tomee-1     | 05-Jan-2026 10:40:55.918 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/usr/local/tomee/webapps/manager" loaded.
+tomee-1     | 05-Jan-2026 10:40:55.918 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /usr/local/tomee/webapps/manager
+tomee-1     | 05-Jan-2026 10:40:55.923 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+tomee-1     | 05-Jan-2026 10:40:55.926 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file /usr/local/tomee/webapps/manager/META-INF/context.xml
+tomee-1     | 05-Jan-2026 10:40:55.926 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/usr/local/tomee/webapps/manager)
+tomee-1     | 05-Jan-2026 10:40:55.957 INFO [main] org.apache.myfaces.webapp.MyFacesContainerInitializer.onStartup Using org.apache.myfaces.webapp.MyFacesContainerInitializer
+tomee-1     | 05-Jan-2026 10:40:55.984 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+tomee-1     | 05-Jan-2026 10:40:55.988 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/usr/local/tomee/webapps/manager] has finished in [100] ms
+tomee-1     | 05-Jan-2026 10:40:55.989 INFO [main] java.lang.reflect.Method.invoke Deploying web application directory [/usr/local/tomee/webapps/docs]
+tomee-1     | 05-Jan-2026 10:40:55.989 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /docs
+tomee-1     | 05-Jan-2026 10:40:56.002 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+tomee-1     | 05-Jan-2026 10:40:56.005 WARNING [main] org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal jdbc/DBUniClass resource was defined in both tomcat and tomee so removing tomcat one
+tomee-1     | 05-Jan-2026 10:40:56.006 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: /usr/local/tomee/webapps/docs
+tomee-1     | 05-Jan-2026 10:40:56.009 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "/usr/local/tomee/webapps/docs" loaded.
+tomee-1     | 05-Jan-2026 10:40:56.009 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: /usr/local/tomee/webapps/docs
+tomee-1     | 05-Jan-2026 10:40:56.013 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+tomee-1     | 05-Jan-2026 10:40:56.015 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.deployWebApps using context file /usr/local/tomee/webapps/docs/META-INF/context.xml
+tomee-1     | 05-Jan-2026 10:40:56.015 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=/usr/local/tomee/webapps/docs)
+tomee-1     | 05-Jan-2026 10:40:56.034 INFO [main] org.apache.myfaces.webapp.MyFacesContainerInitializer.onStartup Using org.apache.myfaces.webapp.MyFacesContainerInitializer
+tomee-1     | 05-Jan-2026 10:40:56.053 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+tomee-1     | 05-Jan-2026 10:40:56.059 INFO [main] java.lang.reflect.Method.invoke Deployment of web application directory [/usr/local/tomee/webapps/docs] has finished in [70] ms
+tomee-1     | 05-Jan-2026 10:40:56.062 INFO [main] java.lang.reflect.Method.invoke Starting ProtocolHandler ["http-nio-8080"]
+tomee-1     | 05-Jan-2026 10:40:56.082 INFO [main] java.lang.reflect.Method.invoke Server startup in [5285] milliseconds
+tomee-1     | 05-Jan-2026 10:41:06.478 WARNING [http-nio-8080-exec-1] org.apache.openejb.core.security.AbstractSecurityService.isCallerAuthorized Skipping JACC authorization checks as TomEE running on JDK 21+ does not support method security at the moment.
+tomee-1     | Profile(
+tomee-1     |   total time=686038,
+tomee-1     |   local time=686038,
+tomee-1     |   Timer:SqlGeneration=686038,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=6625901,
+tomee-1     |   local time=6625901,
+tomee-1     |   Timer:QueryPreparation=6625901,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="CorsoLaurea.trovaTutti" referenceClass=CorsoLaurea sql="SELECT ID, NOME FROM CORSOLAUREA")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:41:06.548--ServerSession(2135059933)--Connection(1907201743)--Thread(Thread[#229,http-nio-8080-exec-1,5,main])--SELECT ID, NOME FROM CORSOLAUREA
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |   number of objects=2,
+tomee-1     |   total time=18165755,
+tomee-1     |   local time=18165755,
+tomee-1     |   profiling time=424158,
+tomee-1     |   Timer:SqlPrepare=836311,
+tomee-1     |   Timer:Caching=1954292,
+tomee-1     |   Timer:ConnectionManagement=850610,
+tomee-1     |   Timer:Logging=223419,
+tomee-1     |   Timer:StatementExecute=3989701,
+tomee-1     |   Timer:RowFetch=2183965,
+tomee-1     |   Timer:ObjectBuilding=7348356,
+tomee-1     |   Timer:DescriptorEvents=67395,
+tomee-1     |   time/object=9082877,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=153480,
+tomee-1     |   local time=153480,
+tomee-1     |   Timer:UnitOfWorkCommit=153480,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=213542,
+tomee-1     |   local time=213542,
+tomee-1     |   Timer:TXBeforeCompletion=213542,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=43768,
+tomee-1     |   local time=43768,
+tomee-1     |   Timer:TXAfterCompletion=43768,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=929382,
+tomee-1     |   local time=929382,
+tomee-1     |   Timer:SqlGeneration=929382,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4195494,
+tomee-1     |   local time=4195494,
+tomee-1     |   Timer:QueryPreparation=4195494,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=4258671,
+tomee-1     |   local time=4258671,
+tomee-1     |   Timer:QueryPreparation=4258671,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="CorsoLaurea.trovaCorsoLaureaNome" referenceClass=CorsoLaurea sql="SELECT ID, NOME FROM CORSOLAUREA WHERE (NOME = ?)")
+tomee-1     | Begin profile of{ReadAllQuery(name="CorsoLaurea.trovaCorsoLaureaNome" referenceClass=CorsoLaurea sql="SELECT ID, NOME FROM CORSOLAUREA WHERE (NOME = ?)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.693--ServerSession(2135059933)--Connection(927881265)--Thread(Thread[#238,http-nio-8080-exec-10,5,main])--SELECT ID, NOME FROM CORSOLAUREA WHERE (NOME = ?)
+tomee-1     |   bind => [Informatica]
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.694--ServerSession(2135059933)--Connection(1960535510)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, NOME FROM CORSOLAUREA WHERE (NOME = ?)
+tomee-1     |   bind => [Informatica]
+tomee-1     |   Profile(ReadAllQuery,
+tomee-1     |           class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=20549124,
+tomee-1     |           local time=20549124,
+tomee-1     |           profiling time=407522,
+tomee-1     |   Timer:SqlPrepare=5177968,
+tomee-1     |   Timer:Caching=34830,
+tomee-1     |   Timer:ConnectionManagement=1378013,
+tomee-1     |   Timer:Logging=453762,
+tomee-1     |   Timer:StatementExecute=10289605,
+tomee-1     |   Timer:RowFetch=325519,
+tomee-1     |   Timer:ObjectBuilding=1427899,
+tomee-1     |   Timer:DescriptorEvents=58489,
+tomee-1     |   time/object=20549124,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=20678660,
+tomee-1     |   local time=20678660,
+tomee-1     |   profiling time=376610,
+tomee-1     |   Timer:SqlPrepare=3938630,
+tomee-1     |   Timer:Caching=1104865,
+tomee-1     |   Timer:ConnectionManagement=2928331,
+tomee-1     |   Timer:Logging=293043,
+tomee-1     |   Timer:StatementExecute=10291574,
+tomee-1     |   Timer:RowFetch=325469,
+tomee-1     |   Timer:ObjectBuilding=1557772,
+tomee-1     |   Timer:DescriptorEvents=5204,
+tomee-1     |   time/object=20678660,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=177842,
+tomee-1     |   local time=177842,
+tomee-1     |   Timer:UnitOfWorkCommit=177842,
+tomee-1     | )
+tomee-1     | Profile(Profile(
+tomee-1     |   total time=240165,
+tomee-1     |   local time=240165,
+tomee-1     |   Timer:TXBeforeCompletion=240165,
+tomee-1     | )
+tomee-1     |
+tomee-1     |   total time=48762,
+tomee-1     |   local time=48762,
+tomee-1     |   Timer:UnitOfWorkCommit=48762,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=198186,
+tomee-1     |   local time=198186,
+tomee-1     |   Timer:TXBeforeCompletion=198186,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=182071,
+tomee-1     |   local time=182071,
+tomee-1     |   Timer:TXAfterCompletion=182071,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=94458,
+tomee-1     |   local time=94458,
+tomee-1     |   Timer:TXAfterCompletion=94458,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=626682,
+tomee-1     |   local time=626682,
+tomee-1     |   Timer:SqlGeneration=626682,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=1990202,
+tomee-1     |   local time=1990202,
+tomee-1     |   Timer:QueryPreparation=1990202,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="AnnoDidattico.trovaAnniCorsoLaurea" referenceClass=AnnoDidattico sql="SELECT t1.ID, t1.ANNO FROM CORSOLAUREA t0, corso_laurea_anno_didattico t2, anni t1 WHERE ((t0.ID = ?) AND ((t2.anno_didattico_id = t1.ID) AND (t0.ID = t2.corso_laurea_id)))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.737--ServerSession(2135059933)--Connection(1843139066)--Thread(Thread[#238,http-nio-8080-exec-10,5,main])--SELECT t1.ID, t1.ANNO FROM CORSOLAUREA t0, corso_laurea_anno_didattico t2, anni t1 WHERE ((t0.ID = ?) AND ((t2.anno_didattico_id = t1.ID) AND (t0.ID = t2.corso_laurea_id)))
+tomee-1     |   bind => [1]
+tomee-1     |   Begin profile of{ReadAllQuery(name="Resto.trovaRestiCorso" referenceClass=Resto sql="SELECT t1.ID, t1.NOME, t1.corso_laurea_id FROM CORSOLAUREA t0, RESTO t1 WHERE ((t0.NOME = ?) AND (t0.ID = t1.corso_laurea_id))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.741--ServerSession(2135059933)--Connection(1955135897)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT t1.ID, t1.NOME, t1.corso_laurea_id FROM CORSOLAUREA t0, RESTO t1 WHERE ((t0.NOME = ?) AND (t0.ID = t1.corso_laurea_id))
+tomee-1     |   bind => [Informatica]
+tomee-1     |   Profile(ReadAllQuery,
+tomee-1     |           class=it.unisa.uniclass.orari.model.AnnoDidattico,
+tomee-1     |           number of objects=3,
+tomee-1     |           total time=10127350,
+tomee-1     |           local time=10127350,
+tomee-1     |           profiling time=168183,
+tomee-1     |           Timer:SqlPrepare=409663,
+tomee-1     |           Timer:Caching=44898,
+tomee-1     |           Timer:ConnectionManagement=223103,
+tomee-1     |           Timer:Logging=98375,
+tomee-1     |           Timer:StatementExecute=5938939,
+tomee-1     |           Timer:RowFetch=1723858,
+tomee-1     |           Timer:ObjectBuilding=1245805,
+tomee-1     |           Timer:DescriptorEvents=53297,
+tomee-1     |           time/object=3375783,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     |   Begin profile of{ReadObjectQuery(name="corsoLaurea" referenceClass=CorsoLaurea )
+tomee-1     |   Profile(ReadObjectQuery,
+tomee-1     |           class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=451914,
+tomee-1     |           local time=451914,
+tomee-1     |           profiling time=554678,
+tomee-1     |           Timer:Caching=50423,
+tomee-1     |           time/object=451914,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     |   Begin profile of{ReadAllQuery(name="lezioni" referenceClass=Lezione sql="SELECT ID, GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id FROM lezioni WHERE (resto_id = ?)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.751--ServerSession(2135059933)--Connection(1994971739)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id FROM lezioni WHERE (resto_id = ?)
+tomee-1     |   bind => [1]
+tomee-1     |           Begin profile of{ReadObjectQuery(name="aula" referenceClass=Aula )
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.763--ServerSession(2135059933)--Connection(826279721)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, EDIFICIO, NOME FROM aule WHERE (ID = ?)
+tomee-1     |   bind => [1]
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=4454150,
+tomee-1     |                   local time=4454150,
+tomee-1     |                   profiling time=291132,
+tomee-1     |                   Timer:QueryPreparation=607184,
+tomee-1     |                   Timer:SqlGeneration=81166,
+tomee-1     |                   Timer:SqlPrepare=289139,
+tomee-1     |                   Timer:Caching=75702,
+tomee-1     |                   Timer:ConnectionManagement=383869,
+tomee-1     |                   Timer:Logging=156166,
+tomee-1     |                   Timer:StatementExecute=2029307,
+tomee-1     |                   Timer:RowFetch=107834,
+tomee-1     |                   Timer:ObjectBuilding=307218,
+tomee-1     |                   Timer:DescriptorEvents=10840,
+tomee-1     |                   time/object=4454150,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="corso" referenceClass=Corso )
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.767--ServerSession(2135059933)--Connection(1804456692)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, NOME, anno_didattico_id, corso_laurea_id FROM corsi WHERE (ID = ?)
+tomee-1     |   bind => [3]
+tomee-1     |                   Begin profile of{ReadObjectQuery(name="annoDidattico" referenceClass=AnnoDidattico )
+tomee-1     |                   Profile(ReadObjectQuery,
+tomee-1     |                           class=it.unisa.uniclass.orari.model.AnnoDidattico,
+tomee-1     |                           number of objects=1,
+tomee-1     |                           total time=52547,
+tomee-1     |                           local time=52547,
+tomee-1     |                           profiling time=221629,
+tomee-1     |                           Timer:Caching=10923,
+tomee-1     |                           time/object=52547,
+tomee-1     |                   )
+tomee-1     |                   }End profile
+tomee-1     |                   Begin profile of{ReadObjectQuery(name="corsoLaurea" referenceClass=CorsoLaurea )
+tomee-1     |                   Profile(ReadObjectQuery,
+tomee-1     |                           class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |                           number of objects=1,
+tomee-1     |                           total time=59028,
+tomee-1     |                           local time=59028,
+tomee-1     |                           profiling time=124256,
+tomee-1     |                           Timer:Caching=28162,
+tomee-1     |                           time/object=59028,
+tomee-1     |                   )
+tomee-1     |                   }End profile
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Corso,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=6405326,
+tomee-1     |                   local time=6293751,
+tomee-1     |                   profiling time=924518,
+tomee-1     |                   Timer:QueryPreparation=424689,
+tomee-1     |                   Timer:SqlGeneration=122836,
+tomee-1     |                   Timer:SqlPrepare=152894,
+tomee-1     |                   Timer:Caching=67734,
+tomee-1     |                   Timer:ConnectionManagement=248741,
+tomee-1     |                   Timer:Logging=156186,
+tomee-1     |                   Timer:StatementExecute=3462915,
+tomee-1     |                   Timer:RowFetch=807026,
+tomee-1     |                   Timer:ObjectBuilding=595594,
+tomee-1     |                   Timer:DescriptorEvents=12380,
+tomee-1     |                   time/object=6405326,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="resto" referenceClass=Resto )
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=62849,
+tomee-1     |                   local time=62849,
+tomee-1     |                   profiling time=100494,
+tomee-1     |                   Timer:Caching=23580,
+tomee-1     |                   time/object=62849,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="aula" referenceClass=Aula )
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.775--ServerSession(2135059933)--Connection(1377211701)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, EDIFICIO, NOME FROM aule WHERE (ID = ?)
+tomee-1     |   bind => [2]
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=3494235,
+tomee-1     |                   local time=3494235,
+tomee-1     |                   profiling time=222893,
+tomee-1     |                   Timer:SqlPrepare=106703,
+tomee-1     |                   Timer:Caching=81641,
+tomee-1     |                   Timer:ConnectionManagement=172536,
+tomee-1     |                   Timer:Logging=197481,
+tomee-1     |                   Timer:StatementExecute=2270532,
+tomee-1     |                   Timer:RowFetch=112345,
+tomee-1     |                   Timer:ObjectBuilding=287302,
+tomee-1     |                   Timer:DescriptorEvents=18562,
+tomee-1     |                   time/object=3494235,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="corso" referenceClass=Corso )
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.78--ServerSession(2135059933)--Connection(456848204)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, NOME, anno_didattico_id, corso_laurea_id FROM corsi WHERE (ID = ?)
+tomee-1     |   bind => [2]
+tomee-1     |                   Begin profile of{ReadObjectQuery(name="annoDidattico" referenceClass=AnnoDidattico )
+tomee-1     |                   Profile(ReadObjectQuery,
+tomee-1     |                           class=it.unisa.uniclass.orari.model.AnnoDidattico,
+tomee-1     |                           number of objects=1,
+tomee-1     |                           total time=70472,
+tomee-1     |                           local time=70472,
+tomee-1     |                           profiling time=219251,
+tomee-1     |                           Timer:Caching=8921,
+tomee-1     |                           time/object=70472,
+tomee-1     |                   )
+tomee-1     |                   }End profile
+tomee-1     |                   Begin profile of{ReadObjectQuery(name="corsoLaurea" referenceClass=CorsoLaurea )
+tomee-1     |                   Profile(ReadObjectQuery,
+tomee-1     |                           class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |                           number of objects=1,
+tomee-1     |                           total time=50185,
+tomee-1     |                           local time=50185,
+tomee-1     |                           profiling time=99864,
+tomee-1     |                           Timer:Caching=9500,
+tomee-1     |                           time/object=50185,
+tomee-1     |                   )
+tomee-1     |                   }End profile
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Corso,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=4950403,
+tomee-1     |                   local time=4829746,
+tomee-1     |                   profiling time=853347,
+tomee-1     |                   Timer:SqlPrepare=183304,
+tomee-1     |                   Timer:Caching=81909,
+tomee-1     |                   Timer:ConnectionManagement=281006,
+tomee-1     |                   Timer:Logging=2015401,
+tomee-1     |                   Timer:StatementExecute=918710,
+tomee-1     |                   Timer:RowFetch=132811,
+tomee-1     |                   Timer:ObjectBuilding=336159,
+tomee-1     |                   Timer:DescriptorEvents=10683,
+tomee-1     |                   time/object=4950403,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="resto" referenceClass=Resto )
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=72523,
+tomee-1     |                   local time=72523,
+tomee-1     |                   profiling time=109933,
+tomee-1     |                   Timer:Caching=20981,
+tomee-1     |                   time/object=72523,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="aula" referenceClass=Aula )
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=67546,
+tomee-1     |                   local time=67546,
+tomee-1     |                   profiling time=126623,
+tomee-1     |                   Timer:Caching=9924,
+tomee-1     |                   time/object=67546,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="corso" referenceClass=Corso )
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.788--ServerSession(2135059933)--Connection(1554389039)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, NOME, anno_didattico_id, corso_laurea_id FROM corsi WHERE (ID = ?)
+tomee-1     |   bind => [1]
+tomee-1     |                   Begin profile of{ReadObjectQuery(name="annoDidattico" referenceClass=AnnoDidattico )
+tomee-1     |                   Profile(ReadObjectQuery,
+tomee-1     |                           class=it.unisa.uniclass.orari.model.AnnoDidattico,
+tomee-1     |                           number of objects=1,
+tomee-1     |                           total time=123104,
+tomee-1     |                           local time=123104,
+tomee-1     |                           profiling time=155523,
+tomee-1     |                           Timer:Caching=14196,
+tomee-1     |                           time/object=123104,
+tomee-1     |                   )
+tomee-1     |                   }End profile
+tomee-1     |                   Begin profile of{ReadObjectQuery(name="corsoLaurea" referenceClass=CorsoLaurea )
+tomee-1     |                   Profile(ReadObjectQuery,
+tomee-1     |                           class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |                           number of objects=1,
+tomee-1     |                           total time=86396,
+tomee-1     |                           local time=86396,
+tomee-1     |                           profiling time=248447,
+tomee-1     |                           Timer:Caching=16787,
+tomee-1     |                           time/object=86396,
+tomee-1     |                   )
+tomee-1     |                   }End profile
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Corso,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=2362268,
+tomee-1     |                   local time=2152768,
+tomee-1     |                   profiling time=1094812,
+tomee-1     |                   Timer:SqlPrepare=79934,
+tomee-1     |                   Timer:Caching=51079,
+tomee-1     |                   Timer:ConnectionManagement=151346,
+tomee-1     |                   Timer:Logging=66389,
+tomee-1     |                   Timer:StatementExecute=1052706,
+tomee-1     |                   Timer:RowFetch=62985,
+tomee-1     |                   Timer:ObjectBuilding=451610,
+tomee-1     |                   Timer:DescriptorEvents=9725,
+tomee-1     |                   time/object=2362268,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="resto" referenceClass=Resto )
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=929852,
+tomee-1     |                   local time=929852,
+tomee-1     |                   profiling time=107729,
+tomee-1     |                   Timer:Caching=16842,
+tomee-1     |                   time/object=929852,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="aula" referenceClass=Aula )
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.793--ServerSession(2135059933)--Connection(1496939325)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, EDIFICIO, NOME FROM aule WHERE (ID = ?)
+tomee-1     |   bind => [4]
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=2520006,
+tomee-1     |                   local time=2520006,
+tomee-1     |                   profiling time=129706,
+tomee-1     |                   Timer:SqlPrepare=211678,
+tomee-1     |                   Timer:Caching=46940,
+tomee-1     |                   Timer:ConnectionManagement=284671,
+tomee-1     |                   Timer:Logging=152207,
+tomee-1     |                   Timer:StatementExecute=1014959,
+tomee-1     |                   Timer:RowFetch=68994,
+tomee-1     |                   Timer:ObjectBuilding=152550,
+tomee-1     |                   Timer:DescriptorEvents=9587,
+tomee-1     |                   time/object=2520006,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="corso" referenceClass=Corso )
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Corso,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=129798,
+tomee-1     |                   local time=129798,
+tomee-1     |                   profiling time=81068,
+tomee-1     |                   Timer:Caching=28314,
+tomee-1     |                   time/object=129798,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="resto" referenceClass=Resto )
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=47605,
+tomee-1     |                   local time=47605,
+tomee-1     |                   profiling time=51938,
+tomee-1     |                   Timer:Caching=12156,
+tomee-1     |                   time/object=47605,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="aula" referenceClass=Aula )
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.797--ServerSession(2135059933)--Connection(1071702546)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, EDIFICIO, NOME FROM aule WHERE (ID = ?)
+tomee-1     |   bind => [3]
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=2542013,
+tomee-1     |                   local time=2542013,
+tomee-1     |                   profiling time=159128,
+tomee-1     |                   Timer:SqlPrepare=106356,
+tomee-1     |                   Timer:Caching=34112,
+tomee-1     |                   Timer:ConnectionManagement=227910,
+tomee-1     |                   Timer:Logging=92884,
+tomee-1     |                   Timer:StatementExecute=1524637,
+tomee-1     |                   Timer:RowFetch=73683,
+tomee-1     |                   Timer:ObjectBuilding=188658,
+tomee-1     |                   Timer:DescriptorEvents=19280,
+tomee-1     |                   time/object=2542013,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="corso" referenceClass=Corso )
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Corso,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=71419,
+tomee-1     |                   local time=71419,
+tomee-1     |                   profiling time=66213,
+tomee-1     |                   Timer:Caching=20345,
+tomee-1     |                   time/object=71419,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="resto" referenceClass=Resto )
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=44386,
+tomee-1     |                   local time=44386,
+tomee-1     |                   profiling time=39370,
+tomee-1     |                   Timer:Caching=12794,
+tomee-1     |                   time/object=44386,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="aula" referenceClass=Aula )
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.8--ServerSession(2135059933)--Connection(1938605617)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, EDIFICIO, NOME FROM aule WHERE (ID = ?)
+tomee-1     |   bind => [5]
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=1948945,
+tomee-1     |                   local time=1948945,
+tomee-1     |                   profiling time=65182,
+tomee-1     |                   Timer:SqlPrepare=204668,
+tomee-1     |                   Timer:Caching=29696,
+tomee-1     |                   Timer:ConnectionManagement=243539,
+tomee-1     |                   Timer:Logging=94758,
+tomee-1     |                   Timer:StatementExecute=908795,
+tomee-1     |                   Timer:RowFetch=58410,
+tomee-1     |                   Timer:ObjectBuilding=197612,
+tomee-1     |                   Timer:DescriptorEvents=10102,
+tomee-1     |                   time/object=1948945,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="corso" referenceClass=Corso )
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Corso,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=83796,
+tomee-1     |                   local time=83796,
+tomee-1     |                   profiling time=70028,
+tomee-1     |                   Timer:Caching=25820,
+tomee-1     |                   time/object=83796,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |           Begin profile of{ReadObjectQuery(name="resto" referenceClass=Resto )
+tomee-1     |           Profile(ReadObjectQuery,
+tomee-1     |                   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |                   number of objects=1,
+tomee-1     |                   total time=39724,
+tomee-1     |                   local time=39724,
+tomee-1     |                   profiling time=34646,
+tomee-1     |                   Timer:Caching=10309,
+tomee-1     |                   time/object=39724,
+tomee-1     |           )
+tomee-1     |           }End profile
+tomee-1     |   Profile(ReadAllQuery,
+tomee-1     |           class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |           number of objects=6,
+tomee-1     |           total time=42446612,
+tomee-1     |           local time=12219768,
+tomee-1     |           profiling time=9231123,
+tomee-1     |           Timer:SqlPrepare=217544,
+tomee-1     |           Timer:Caching=240478,
+tomee-1     |           Timer:ConnectionManagement=234404,
+tomee-1     |           Timer:Logging=164023,
+tomee-1     |           Timer:StatementExecute=1443296,
+tomee-1     |           Timer:RowFetch=6556233,
+tomee-1     |           Timer:ObjectBuilding=2951628,
+tomee-1     |           Timer:DescriptorEvents=77043,
+tomee-1     |           time/object=7074435,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     |   Begin profile of{ReadObjectQuery(name="corsoLaurea" referenceClass=CorsoLaurea )
+tomee-1     |   Profile(ReadObjectQuery,
+tomee-1     |           class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=103405,
+tomee-1     |           local time=103405,
+tomee-1     |           profiling time=754819,
+tomee-1     |           Timer:Caching=12227,
+tomee-1     |           time/object=103405,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     |   Begin profile of{ReadAllQuery(name="lezioni" referenceClass=Lezione sql="SELECT ID, GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id FROM lezioni WHERE (resto_id = ?)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.813--ServerSession(2135059933)--Connection(1812771458)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id FROM lezioni WHERE (resto_id = ?)
+tomee-1     |   bind => [2]
+tomee-1     |   Profile(ReadAllQuery,
+tomee-1     |           class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |           total time=1706361,
+tomee-1     |           local time=1706361,
+tomee-1     |           profiling time=177679,
+tomee-1     |           Timer:SqlPrepare=159780,
+tomee-1     |           Timer:ConnectionManagement=205951,
+tomee-1     |           Timer:Logging=132162,
+tomee-1     |           Timer:StatementExecute=871318,
+tomee-1     |           Timer:RowFetch=26371,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     |   Begin profile of{ReadObjectQuery(name="corsoLaurea" referenceClass=CorsoLaurea )
+tomee-1     |   Profile(ReadObjectQuery,
+tomee-1     |           class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=97718,
+tomee-1     |           local time=97718,
+tomee-1     |           profiling time=144204,
+tomee-1     |           Timer:Caching=29460,
+tomee-1     |           time/object=97718,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     |   Begin profile of{ReadAllQuery(name="lezioni" referenceClass=Lezione sql="SELECT ID, GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id FROM lezioni WHERE (resto_id = ?)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:07.816--ServerSession(2135059933)--Connection(276469141)--Thread(Thread[#236,http-nio-8080-exec-8,5,main])--SELECT ID, GIORNO, ORAFINE, ORAINIZIO, SEMESTRE, aula_id, corso_id, resto_id FROM lezioni WHERE (resto_id = ?)
+tomee-1     |   bind => [3]
+tomee-1     |   Profile(ReadAllQuery,
+tomee-1     |           class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |           total time=1379615,
+tomee-1     |           local time=1379615,
+tomee-1     |           profiling time=91785,
+tomee-1     |           Timer:SqlPrepare=95760,
+tomee-1     |           Timer:ConnectionManagement=164030,
+tomee-1     |           Timer:Logging=84480,
+tomee-1     |           Timer:StatementExecute=717902,
+tomee-1     |           Timer:RowFetch=32543,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |   number of objects=3,
+tomee-1     |   total time=64192686,
+tomee-1     |   local time=7879711,
+tomee-1     |   profiling time=12935743,
+tomee-1     |   Timer:QueryPreparation=883568,
+tomee-1     |   Timer:SqlGeneration=181193,
+tomee-1     |   Timer:SqlPrepare=175879,
+tomee-1     |   Timer:Caching=374790,
+tomee-1     |   Timer:ConnectionManagement=216386,
+tomee-1     |   Timer:Logging=181031,
+tomee-1     |   Timer:StatementExecute=4329794,
+tomee-1     |   Timer:Register=728514,
+tomee-1     |   Timer:RowFetch=189980,
+tomee-1     |   Timer:ObjectBuilding=12971888,
+tomee-1     |   Timer:DescriptorEvents=88392,
+tomee-1     |   time/object=21397562,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=10881,
+tomee-1     |   local time=10881,
+tomee-1     |   Timer:DescriptorEvents=10881,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=53734,
+tomee-1     |   local time=53734,
+tomee-1     |   Timer:DescriptorEvents=53734,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=11288,
+tomee-1     |   local time=11288,
+tomee-1     |   Timer:DescriptorEvents=11288,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=5036,
+tomee-1     |   local time=5036,
+tomee-1     |   Timer:DescriptorEvents=5036,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=3248,
+tomee-1     |   local time=3248,
+tomee-1     |   Timer:DescriptorEvents=3248,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2011,
+tomee-1     |   local time=2011,
+tomee-1     |   Timer:DescriptorEvents=2011,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=1696115,
+tomee-1     |   local time=1696115,
+tomee-1     |   Timer:UnitOfWorkCommit=1696115,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=1740343,
+tomee-1     |   local time=1740343,
+tomee-1     |   Timer:TXBeforeCompletion=1740343,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=51624,
+tomee-1     |   local time=51624,
+tomee-1     |   Timer:TXAfterCompletion=51624,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="CorsoLaurea.trovaCorsoLaureaNome" referenceClass=CorsoLaurea sql="SELECT ID, NOME FROM CORSOLAUREA WHERE (NOME = ?)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.741--ServerSession(2135059933)--Connection(574310517)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT ID, NOME FROM CORSOLAUREA WHERE (NOME = ?)
+tomee-1     |   bind => [Informatica]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3256626,
+tomee-1     |   local time=3256626,
+tomee-1     |   profiling time=438291,
+tomee-1     |   Timer:Logging=212089,
+tomee-1     |   Timer:ObjectBuilding=619037,
+tomee-1     |   Timer:SqlPrepare=224363,
+tomee-1     |   Timer:ConnectionManagement=290544,
+tomee-1     |   Timer:StatementExecute=1282228,
+tomee-1     |   Timer:Caching=20248,
+tomee-1     |   Timer:DescriptorEvents=36634,
+tomee-1     |   Timer:RowFetch=100970,
+tomee-1     |   time/object=3256626,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=60251,
+tomee-1     |   local time=60251,
+tomee-1     |   Timer:UnitOfWorkCommit=60251,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=184009,
+tomee-1     |   local time=184009,
+tomee-1     |   Timer:TXBeforeCompletion=184009,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=45767,
+tomee-1     |   local time=45767,
+tomee-1     |   Timer:TXAfterCompletion=45767,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=156420,
+tomee-1     |   local time=156420,
+tomee-1     |   Timer:SqlGeneration=156420,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=872714,
+tomee-1     |   local time=872714,
+tomee-1     |   Timer:QueryPreparation=872714,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="Resto.trovaRestoNomeCorso" referenceClass=Resto sql="SELECT t1.ID, t1.NOME, t1.corso_laurea_id FROM CORSOLAUREA t0, RESTO t1 WHERE (((t1.NOME = ?) AND (t0.NOME = ?)) AND (t0.ID = t1.corso_laurea_id))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.755--ServerSession(2135059933)--Connection(157244471)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT t1.ID, t1.NOME, t1.corso_laurea_id FROM CORSOLAUREA t0, RESTO t1 WHERE (((t1.NOME = ?) AND (t0.NOME = ?)) AND (t0.ID = t1.corso_laurea_id))
+tomee-1     |   bind => [Resto 0, Informatica]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=3414690,
+tomee-1     |   local time=3414690,
+tomee-1     |   profiling time=129673,
+tomee-1     |   Timer:SqlPrepare=179629,
+tomee-1     |   Timer:Caching=53854,
+tomee-1     |   Timer:ConnectionManagement=152505,
+tomee-1     |   Timer:Logging=94704,
+tomee-1     |   Timer:StatementExecute=835766,
+tomee-1     |   Timer:Register=442658,
+tomee-1     |   Timer:RowFetch=63177,
+tomee-1     |   Timer:ObjectBuilding=1834454,
+tomee-1     |   Timer:DescriptorEvents=32529,
+tomee-1     |   time/object=3414690,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=10162,
+tomee-1     |   local time=10162,
+tomee-1     |   Timer:DescriptorEvents=10162,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=5676,
+tomee-1     |   local time=5676,
+tomee-1     |   Timer:DescriptorEvents=5676,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=328672,
+tomee-1     |   local time=328672,
+tomee-1     |   Timer:UnitOfWorkCommit=328672,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=390438,
+tomee-1     |   local time=390438,
+tomee-1     |   Timer:TXBeforeCompletion=390438,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=33008,
+tomee-1     |   local time=33008,
+tomee-1     |   Timer:TXAfterCompletion=33008,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=99737,
+tomee-1     |   local time=99737,
+tomee-1     |   Timer:SqlGeneration=99737,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=647433,
+tomee-1     |   local time=647433,
+tomee-1     |   Timer:QueryPreparation=647433,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="AnnoDidattico.trovaAnniCorsoLaureaNome" referenceClass=AnnoDidattico sql="SELECT t1.ID, t1.ANNO FROM CORSOLAUREA t0, corso_laurea_anno_didattico t2, anni t1 WHERE (((t0.ID = ?) AND (t1.ANNO = ?)) AND ((t2.anno_didattico_id = t1.ID) AND (t0.ID = t2.corso_laurea_id)))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.774--ServerSession(2135059933)--Connection(1238143637)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT t1.ID, t1.ANNO FROM CORSOLAUREA t0, corso_laurea_anno_didattico t2, anni t1 WHERE (((t0.ID = ?) AND (t1.ANNO = ?)) AND ((t2.anno_didattico_id = t1.ID) AND (t0.ID = t2.corso_laurea_id)))
+tomee-1     |   bind => [1, Anno 3]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.AnnoDidattico,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2538768,
+tomee-1     |   local time=2538768,
+tomee-1     |   profiling time=138181,
+tomee-1     |   Timer:SqlPrepare=204758,
+tomee-1     |   Timer:Caching=11540,
+tomee-1     |   Timer:ConnectionManagement=284332,
+tomee-1     |   Timer:Logging=108496,
+tomee-1     |   Timer:StatementExecute=1289117,
+tomee-1     |   Timer:RowFetch=97611,
+tomee-1     |   Timer:ObjectBuilding=266416,
+tomee-1     |   Timer:DescriptorEvents=7990,
+tomee-1     |   time/object=2538768,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=72755,
+tomee-1     |   local time=72755,
+tomee-1     |   Timer:UnitOfWorkCommit=72755,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=193715,
+tomee-1     |   local time=193715,
+tomee-1     |   Timer:TXBeforeCompletion=193715,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=99113,
+tomee-1     |   local time=99113,
+tomee-1     |   Timer:TXAfterCompletion=99113,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=315594,
+tomee-1     |   local time=315594,
+tomee-1     |   Timer:SqlGeneration=315594,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=1454612,
+tomee-1     |   local time=1454612,
+tomee-1     |   Timer:QueryPreparation=1454612,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="Lezione.trovaLezioneCorsoRestoAnno" referenceClass=Lezione sql="SELECT t1.ID, t1.GIORNO, t1.ORAFINE, t1.ORAINIZIO, t1.SEMESTRE, t1.aula_id, t1.corso_id, t1.resto_id FROM anni t4, RESTO t3, CORSOLAUREA t2, lezioni t1, corsi t0 WHERE ((((t0.corso_laurea_id = ?) AND (t1.resto_id = ?)) AND (t0.anno_didattico_id = ?)) AND ((((t0.ID = t1.corso_id) AND (t2.ID = t0.corso_laurea_id)) AND (t3.ID = t1.resto_id)) AND (t4.ID = t0.anno_didattico_id)))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.796--ServerSession(2135059933)--Connection(940516180)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT t1.ID, t1.GIORNO, t1.ORAFINE, t1.ORAINIZIO, t1.SEMESTRE, t1.aula_id, t1.corso_id, t1.resto_id FROM anni t4, RESTO t3, CORSOLAUREA t2, lezioni t1, corsi t0 WHERE ((((t0.corso_laurea_id = ?) AND (t1.resto_id = ?)) AND (t0.anno_didattico_id = ?)) AND ((((t0.ID = t1.corso_id) AND (t2.ID = t0.corso_laurea_id)) AND (t3.ID = t1.resto_id)) AND (t4.ID = t0.anno_didattico_id)))
+tomee-1     |   bind => [1, 1, 3]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |   number of objects=6,
+tomee-1     |   total time=8670762,
+tomee-1     |   local time=8670762,
+tomee-1     |   profiling time=299986,
+tomee-1     |   Timer:SqlPrepare=336950,
+tomee-1     |   Timer:Caching=101925,
+tomee-1     |   Timer:ConnectionManagement=370626,
+tomee-1     |   Timer:Logging=204016,
+tomee-1     |   Timer:StatementExecute=3361359,
+tomee-1     |   Timer:Register=532476,
+tomee-1     |   Timer:RowFetch=963793,
+tomee-1     |   Timer:ObjectBuilding=2749714,
+tomee-1     |   Timer:DescriptorEvents=29302,
+tomee-1     |   time/object=1445127,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{ReadAllQuery(name="docenti" referenceClass=Docente )
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.807--ServerSession(2135059933)--Connection(693883302)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))
+tomee-1     |   bind => [3, Docente, Coordinatore]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.utenti.model.Docente,
+tomee-1     |   total time=4750465,
+tomee-1     |   local time=4750465,
+tomee-1     |   profiling time=302323,
+tomee-1     |   Timer:Logging=163279,
+tomee-1     |   Timer:SqlGeneration=416164,
+tomee-1     |   Timer:SqlPrepare=209805,
+tomee-1     |   Timer:ConnectionManagement=234034,
+tomee-1     |   Timer:StatementExecute=2506338,
+tomee-1     |   Timer:RowFetch=21514,
+tomee-1     |   Timer:QueryPreparation=1242454,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{ReadAllQuery(name="docenti" referenceClass=Docente sql="SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.811--ServerSession(2135059933)--Connection(1595781131)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))
+tomee-1     |   bind => [5, Docente, Coordinatore]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.utenti.model.Docente,
+tomee-1     |   total time=2774962,
+tomee-1     |   local time=2774962,
+tomee-1     |   profiling time=148071,
+tomee-1     |   Timer:Logging=123248,
+tomee-1     |   Timer:SqlPrepare=170599,
+tomee-1     |   Timer:ConnectionManagement=265351,
+tomee-1     |   Timer:StatementExecute=1540469,
+tomee-1     |   Timer:RowFetch=61736,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{ReadAllQuery(name="docenti" referenceClass=Docente sql="SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.815--ServerSession(2135059933)--Connection(2123993687)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))
+tomee-1     |   bind => [6, Docente, Coordinatore]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.utenti.model.Docente,
+tomee-1     |   total time=2968052,
+tomee-1     |   local time=2968052,
+tomee-1     |   profiling time=240652,
+tomee-1     |   Timer:Logging=188370,
+tomee-1     |   Timer:SqlPrepare=150554,
+tomee-1     |   Timer:ConnectionManagement=577376,
+tomee-1     |   Timer:StatementExecute=1285410,
+tomee-1     |   Timer:RowFetch=20413,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{ReadAllQuery(name="docenti" referenceClass=Docente sql="SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.818--ServerSession(2135059933)--Connection(1766019253)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))
+tomee-1     |   bind => [2, Docente, Coordinatore]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.utenti.model.Docente,
+tomee-1     |   total time=8539333,
+tomee-1     |   local time=8539333,
+tomee-1     |   profiling time=107354,
+tomee-1     |   Timer:Logging=6763721,
+tomee-1     |   Timer:SqlPrepare=230512,
+tomee-1     |   Timer:ConnectionManagement=231391,
+tomee-1     |   Timer:StatementExecute=839786,
+tomee-1     |   Timer:RowFetch=22284,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{ReadAllQuery(name="docenti" referenceClass=Docente sql="SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.827--ServerSession(2135059933)--Connection(509770458)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))
+tomee-1     |   bind => [1, Docente, Coordinatore]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.utenti.model.Docente,
+tomee-1     |   total time=1479929,
+tomee-1     |   local time=1479929,
+tomee-1     |   profiling time=76777,
+tomee-1     |   Timer:Logging=85870,
+tomee-1     |   Timer:SqlPrepare=97328,
+tomee-1     |   Timer:ConnectionManagement=132722,
+tomee-1     |   Timer:StatementExecute=881049,
+tomee-1     |   Timer:RowFetch=16666,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Begin profile of{ReadAllQuery(name="docenti" referenceClass=Docente sql="SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.829--ServerSession(2135059933)--Connection(510932993)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT DISTINCT t1.DTYPE FROM docente_lezione t0, docenti t2, ACCADEMICO t1 WHERE ((((t0.lezione_id = ?) AND (t1.MATRICOLA = t0.docente_id)) AND (t2.MATRICOLA = t1.MATRICOLA)) AND (t1.DTYPE IN (?, ?)))
+tomee-1     |   bind => [4, Docente, Coordinatore]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.utenti.model.Docente,
+tomee-1     |   total time=2245718,
+tomee-1     |   local time=2245718,
+tomee-1     |   profiling time=86435,
+tomee-1     |   Timer:Logging=133125,
+tomee-1     |   Timer:SqlPrepare=236692,
+tomee-1     |   Timer:ConnectionManagement=250318,
+tomee-1     |   Timer:StatementExecute=1267749,
+tomee-1     |   Timer:RowFetch=18029,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=10459,
+tomee-1     |   local time=10459,
+tomee-1     |   Timer:DescriptorEvents=10459,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=7382,
+tomee-1     |   local time=7382,
+tomee-1     |   Timer:DescriptorEvents=7382,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="Lezione.trovaLezioneCorsoRestoAnno" referenceClass=Lezione sql="SELECT t1.ID, t1.GIORNO, t1.ORAFINE, t1.ORAINIZIO, t1.SEMESTRE, t1.aula_id, t1.corso_id, t1.resto_id FROM anni t4, RESTO t3, CORSOLAUREA t2, lezioni t1, corsi t0 WHERE ((((t0.corso_laurea_id = ?) AND (t1.resto_id = ?)) AND (t0.anno_didattico_id = ?)) AND ((((t0.ID = t1.corso_id) AND (t2.ID = t0.corso_laurea_id)) AND (t3.ID = t1.resto_id)) AND (t4.ID = t0.anno_didattico_id)))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:43:51.833--ServerSession(2135059933)--Connection(1626867290)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT t1.ID, t1.GIORNO, t1.ORAFINE, t1.ORAINIZIO, t1.SEMESTRE, t1.aula_id, t1.corso_id, t1.resto_id FROM anni t4, RESTO t3, CORSOLAUREA t2, lezioni t1, corsi t0 WHERE ((((t0.corso_laurea_id = ?) AND (t1.resto_id = ?)) AND (t0.anno_didattico_id = ?)) AND ((((t0.ID = t1.corso_id) AND (t2.ID = t0.corso_laurea_id)) AND (t3.ID = t1.resto_id)) AND (t4.ID = t0.anno_didattico_id)))
+tomee-1     |   bind => [1, 1, 3]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |   number of objects=6,
+tomee-1     |   total time=4129678,
+tomee-1     |   local time=4129678,
+tomee-1     |   profiling time=377516,
+tomee-1     |   Timer:Logging=100891,
+tomee-1     |   Timer:ObjectBuilding=146103,
+tomee-1     |   Timer:SqlPrepare=117573,
+tomee-1     |   Timer:ConnectionManagement=408374,
+tomee-1     |   Timer:StatementExecute=1664974,
+tomee-1     |   Timer:RowFetch=988840,
+tomee-1     |   time/object=688279,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=14362,
+tomee-1     |   local time=14362,
+tomee-1     |   Timer:DescriptorEvents=14362,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=7206,
+tomee-1     |   local time=7206,
+tomee-1     |   Timer:DescriptorEvents=7206,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=500141,
+tomee-1     |   local time=500141,
+tomee-1     |   Timer:UnitOfWorkCommit=500141,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=600731,
+tomee-1     |   local time=600731,
+tomee-1     |   Timer:TXBeforeCompletion=600731,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=39093,
+tomee-1     |   local time=39093,
+tomee-1     |   Timer:TXAfterCompletion=39093,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=111650,
+tomee-1     |   local time=111650,
+tomee-1     |   Timer:SqlGeneration=111650,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=668520,
+tomee-1     |   local time=668520,
+tomee-1     |   Timer:QueryPreparation=668520,
+tomee-1     | )
+tomee-1     | Begin profile of{ReportQuery(name="Aula.trovaEdifici" referenceClass=Aula sql="SELECT EDIFICIO FROM aule GROUP BY EDIFICIO")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:44:12.402--ServerSession(2135059933)--Connection(799769817)--Thread(Thread[#233,http-nio-8080-exec-5,5,main])--SELECT EDIFICIO FROM aule GROUP BY EDIFICIO
+tomee-1     | Profile(ReportQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |   number of objects=2,
+tomee-1     |   total time=5611824,
+tomee-1     |   local time=5611824,
+tomee-1     |   profiling time=369146,
+tomee-1     |   Timer:Logging=107134,
+tomee-1     |   Timer:SqlPrepare=118437,
+tomee-1     |   Timer:ConnectionManagement=202354,
+tomee-1     |   Timer:StatementExecute=880641,
+tomee-1     |   Timer:RowFetch=50213,
+tomee-1     |   time/object=2805912,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=4408,
+tomee-1     |   local time=4408,
+tomee-1     |   Timer:UnitOfWorkCommit=4408,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=45846,
+tomee-1     |   local time=45846,
+tomee-1     |   Timer:TXBeforeCompletion=45846,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=67813,
+tomee-1     |   local time=67813,
+tomee-1     |   Timer:TXAfterCompletion=67813,
+tomee-1     | )
+postgres-1  | 2026-01-05 10:45:39.414 UTC [61] LOG:  checkpoint starting: time
+postgres-1  | 2026-01-05 10:45:57.991 UTC [61] LOG:  checkpoint complete: wrote 186 buffers (1.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=18.538 s, sync=0.023 s, total=18.578 s; sync files=112, longest=0.008 s, average=0.001 s; distance=819 kB, estimate=819 kB; lsn=0/19E27D8, redo lsn=0/19E2748
+tomee-1     | Profile(
+tomee-1     |   total time=79788,
+tomee-1     |   local time=79788,
+tomee-1     |   Timer:SqlGeneration=79788,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=571415,
+tomee-1     |   local time=571415,
+tomee-1     |   Timer:QueryPreparation=571415,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="Aula.trovaAulaEdificio" referenceClass=Aula sql="SELECT ID, EDIFICIO, NOME FROM aule WHERE (EDIFICIO = ?)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:47:40.787--ServerSession(2135059933)--Connection(2047001869)--Thread(Thread[#238,http-nio-8080-exec-10,5,main])--SELECT ID, EDIFICIO, NOME FROM aule WHERE (EDIFICIO = ?)
+tomee-1     |   bind => [P]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Aula,
+tomee-1     |   number of objects=2,
+tomee-1     |   total time=2515903,
+tomee-1     |   local time=2515903,
+tomee-1     |   profiling time=223298,
+tomee-1     |   Timer:SqlPrepare=244786,
+tomee-1     |   Timer:Caching=46136,
+tomee-1     |   Timer:ConnectionManagement=271614,
+tomee-1     |   Timer:Logging=112373,
+tomee-1     |   Timer:StatementExecute=796981,
+tomee-1     |   Timer:RowFetch=104615,
+tomee-1     |   Timer:ObjectBuilding=546533,
+tomee-1     |   Timer:DescriptorEvents=18074,
+tomee-1     |   time/object=1257951,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=44240,
+tomee-1     |   local time=44240,
+tomee-1     |   Timer:UnitOfWorkCommit=44240,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=168772,
+tomee-1     |   local time=168772,
+tomee-1     |   Timer:TXBeforeCompletion=168772,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=44436,
+tomee-1     |   local time=44436,
+tomee-1     |   Timer:TXAfterCompletion=44436,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=69281,
+tomee-1     |   local time=69281,
+tomee-1     |   Timer:SqlGeneration=69281,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=463391,
+tomee-1     |   local time=463391,
+tomee-1     |   Timer:QueryPreparation=463391,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="Lezione.trovaLezioneAula" referenceClass=Lezione sql="SELECT t1.ID, t1.GIORNO, t1.ORAFINE, t1.ORAINIZIO, t1.SEMESTRE, t1.aula_id, t1.corso_id, t1.resto_id FROM aule t0, lezioni t1 WHERE ((t0.NOME = ?) AND (t0.ID = t1.aula_id))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:47:40.943--ServerSession(2135059933)--Connection(1359606050)--Thread(Thread[#238,http-nio-8080-exec-10,5,main])--SELECT t1.ID, t1.GIORNO, t1.ORAFINE, t1.ORAINIZIO, t1.SEMESTRE, t1.aula_id, t1.corso_id, t1.resto_id FROM aule t0, lezioni t1 WHERE ((t0.NOME = ?) AND (t0.ID = t1.aula_id))
+tomee-1     |   bind => [P2]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=4302983,
+tomee-1     |   local time=4302983,
+tomee-1     |   profiling time=67210,
+tomee-1     |   Timer:SqlPrepare=89823,
+tomee-1     |   Timer:Caching=61120,
+tomee-1     |   Timer:ConnectionManagement=139729,
+tomee-1     |   Timer:Logging=45180,
+tomee-1     |   Timer:StatementExecute=1189288,
+tomee-1     |   Timer:Register=549278,
+tomee-1     |   Timer:RowFetch=350454,
+tomee-1     |   Timer:ObjectBuilding=2187612,
+tomee-1     |   Timer:DescriptorEvents=22815,
+tomee-1     |   time/object=4302983,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=8279,
+tomee-1     |   local time=8279,
+tomee-1     |   Timer:DescriptorEvents=8279,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2363,
+tomee-1     |   local time=2363,
+tomee-1     |   Timer:DescriptorEvents=2363,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=315706,
+tomee-1     |   local time=315706,
+tomee-1     |   Timer:UnitOfWorkCommit=315706,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=389661,
+tomee-1     |   local time=389661,
+tomee-1     |   Timer:TXBeforeCompletion=389661,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=34654,
+tomee-1     |   local time=34654,
+tomee-1     |   Timer:TXAfterCompletion=34654,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="Lezione.trovaLezioneAula" referenceClass=Lezione sql="SELECT t1.ID, t1.GIORNO, t1.ORAFINE, t1.ORAINIZIO, t1.SEMESTRE, t1.aula_id, t1.corso_id, t1.resto_id FROM aule t0, lezioni t1 WHERE ((t0.NOME = ?) AND (t0.ID = t1.aula_id))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:47:40.955--ServerSession(2135059933)--Connection(788410456)--Thread(Thread[#238,http-nio-8080-exec-10,5,main])--SELECT t1.ID, t1.GIORNO, t1.ORAFINE, t1.ORAINIZIO, t1.SEMESTRE, t1.aula_id, t1.corso_id, t1.resto_id FROM aule t0, lezioni t1 WHERE ((t0.NOME = ?) AND (t0.ID = t1.aula_id))
+tomee-1     |   bind => [P1]
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Lezione,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2734443,
+tomee-1     |   local time=2734443,
+tomee-1     |   profiling time=98470,
+tomee-1     |   Timer:SqlPrepare=111926,
+tomee-1     |   Timer:Caching=37186,
+tomee-1     |   Timer:ConnectionManagement=147656,
+tomee-1     |   Timer:Logging=75279,
+tomee-1     |   Timer:StatementExecute=717188,
+tomee-1     |   Timer:Register=375366,
+tomee-1     |   Timer:RowFetch=168846,
+tomee-1     |   Timer:ObjectBuilding=1224482,
+tomee-1     |   Timer:DescriptorEvents=21814,
+tomee-1     |   time/object=2734443,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=5791,
+tomee-1     |   local time=5791,
+tomee-1     |   Timer:DescriptorEvents=5791,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2259,
+tomee-1     |   local time=2259,
+tomee-1     |   Timer:DescriptorEvents=2259,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=261364,
+tomee-1     |   local time=261364,
+tomee-1     |   Timer:UnitOfWorkCommit=261364,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=305193,
+tomee-1     |   local time=305193,
+tomee-1     |   Timer:TXBeforeCompletion=305193,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=32924,
+tomee-1     |   local time=32924,
+tomee-1     |   Timer:TXAfterCompletion=32924,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="CorsoLaurea.trovaTutti" referenceClass=CorsoLaurea sql="SELECT ID, NOME FROM CORSOLAUREA")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:48:21.04--ServerSession(2135059933)--Connection(568219017)--Thread(Thread[#231,http-nio-8080-exec-3,5,main])--SELECT ID, NOME FROM CORSOLAUREA
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |   number of objects=2,
+tomee-1     |   total time=3103791,
+tomee-1     |   local time=3103791,
+tomee-1     |   profiling time=115532,
+tomee-1     |   Timer:Logging=146078,
+tomee-1     |   Timer:ObjectBuilding=1212893,
+tomee-1     |   Timer:SqlPrepare=58194,
+tomee-1     |   Timer:ConnectionManagement=105480,
+tomee-1     |   Timer:StatementExecute=981477,
+tomee-1     |   Timer:Caching=57009,
+tomee-1     |   Timer:DescriptorEvents=30465,
+tomee-1     |   Timer:RowFetch=224165,
+tomee-1     |   time/object=1551895,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=42867,
+tomee-1     |   local time=42867,
+tomee-1     |   Timer:UnitOfWorkCommit=42867,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=144650,
+tomee-1     |   local time=144650,
+tomee-1     |   Timer:TXBeforeCompletion=144650,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=30390,
+tomee-1     |   local time=30390,
+tomee-1     |   Timer:TXAfterCompletion=30390,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="CorsoLaurea.trovaCorsoLaureaNome" referenceClass=CorsoLaurea sql="SELECT ID, NOME FROM CORSOLAUREA WHERE (NOME = ?)")
+tomee-1     | Begin profile of{ReadAllQuery(name="CorsoLaurea.trovaCorsoLaureaNome" referenceClass=CorsoLaurea sql="SELECT ID, NOME FROM CORSOLAUREA WHERE (NOME = ?)")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:48:42.261--ServerSession(2135059933)--Connection(1671058028)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT ID, NOME FROM CORSOLAUREA WHERE (NOME = ?)
+tomee-1     |   bind => [Informatica]
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:48:42.261--ServerSession(2135059933)--Connection(2057124093)--Thread(Thread[#234,http-nio-8080-exec-6,5,main])--SELECT ID, NOME FROM CORSOLAUREA WHERE (NOME = ?)
+tomee-1     |   bind => [Informatica]
+tomee-1     |   Profile(ReadAllQuery,
+tomee-1     |           class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |           number of objects=1,
+tomee-1     |           total time=1708046,
+tomee-1     |           local time=1708046,
+tomee-1     |           profiling time=130067,
+tomee-1     |           Timer:SqlPrepare=60899,
+tomee-1     |           Timer:Caching=13573,
+tomee-1     |           Timer:ConnectionManagement=170628,
+tomee-1     |           Timer:Logging=84992,
+tomee-1     |           Timer:StatementExecute=634747,
+tomee-1     |           Timer:RowFetch=111860,
+tomee-1     |           Timer:ObjectBuilding=387090,
+tomee-1     |           Timer:DescriptorEvents=9162,
+tomee-1     |           time/object=1708046,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.CorsoLaurea,
+tomee-1     |   number of objects=1,
+tomee-1     |   total time=2689005,
+tomee-1     |   local time=980959,
+tomee-1     |   profiling time=530368,
+tomee-1     |   Timer:Logging=86184,
+tomee-1     |   Timer:ObjectBuilding=336618,
+tomee-1     |   Timer:SqlPrepare=65217,
+tomee-1     |   Timer:ConnectionManagement=125149,
+tomee-1     |   Timer:StatementExecute=2136754,
+tomee-1     |   Timer:Caching=10793,
+tomee-1     |   Timer:DescriptorEvents=15217,
+tomee-1     |   Timer:RowFetch=61742,
+tomee-1     |   time/object=2689005,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=57179,
+tomee-1     |   local time=57179,
+tomee-1     |   Timer:UnitOfWorkCommit=57179,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=142695,
+tomee-1     |   local time=142695,
+tomee-1     |   Timer:TXBeforeCompletion=142695,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=34782,
+tomee-1     |   local time=34782,
+tomee-1     |   Timer:TXAfterCompletion=34782,
+tomee-1     | )
+tomee-1     | Begin profile of{ReadAllQuery(name="Resto.trovaRestiCorso" referenceClass=Resto sql="SELECT t1.ID, t1.NOME, t1.corso_laurea_id FROM CORSOLAUREA t0, RESTO t1 WHERE ((t0.NOME = ?) AND (t0.ID = t1.corso_laurea_id))")
+tomee-1     |   Begin profile of{ReadAllQuery(name="AnnoDidattico.trovaAnniCorsoLaurea" referenceClass=AnnoDidattico sql="SELECT t1.ID, t1.ANNO FROM CORSOLAUREA t0, corso_laurea_anno_didattico t2, anni t1 WHERE ((t0.ID = ?) AND ((t2.anno_didattico_id = t1.ID) AND (t0.ID = t2.corso_laurea_id)))")
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:48:42.268--ServerSession(2135059933)--Connection(2091408025)--Thread(Thread[#232,http-nio-8080-exec-4,5,main])--SELECT t1.ID, t1.NOME, t1.corso_laurea_id FROM CORSOLAUREA t0, RESTO t1 WHERE ((t0.NOME = ?) AND (t0.ID = t1.corso_laurea_id))
+tomee-1     |   bind => [Informatica]
+tomee-1     | [EL Fine]: sql: 2026-01-05 10:48:42.268--ServerSession(2135059933)--Connection(1406079695)--Thread(Thread[#234,http-nio-8080-exec-6,5,main])--SELECT t1.ID, t1.ANNO FROM CORSOLAUREA t0, corso_laurea_anno_didattico t2, anni t1 WHERE ((t0.ID = ?) AND ((t2.anno_didattico_id = t1.ID) AND (t0.ID = t2.corso_laurea_id)))
+tomee-1     |   bind => [1]
+tomee-1     |   Profile(ReadAllQuery,
+tomee-1     |           class=it.unisa.uniclass.orari.model.AnnoDidattico,
+tomee-1     |           number of objects=3,
+tomee-1     |           total time=3465079,
+tomee-1     |           local time=3465079,
+tomee-1     |           profiling time=142080,
+tomee-1     |           Timer:SqlPrepare=208809,
+tomee-1     |           Timer:Caching=29771,
+tomee-1     |           Timer:ConnectionManagement=160995,
+tomee-1     |           Timer:Logging=172645,
+tomee-1     |           Timer:StatementExecute=828199,
+tomee-1     |           Timer:RowFetch=881088,
+tomee-1     |           Timer:ObjectBuilding=813846,
+tomee-1     |           Timer:DescriptorEvents=22506,
+tomee-1     |           time/object=1155026,
+tomee-1     |   )
+tomee-1     |   }End profile
+tomee-1     | Profile(ReadAllQuery,
+tomee-1     |   class=it.unisa.uniclass.orari.model.Resto,
+tomee-1     |   number of objects=3,
+tomee-1     |   total time=5766676,
+tomee-1     |   local time=2301597,
+tomee-1     |   profiling time=503135,
+tomee-1     |   Timer:SqlPrepare=150903,
+tomee-1     |   Timer:Caching=103079,
+tomee-1     |   Timer:ConnectionManagement=189506,
+tomee-1     |   Timer:Logging=257170,
+tomee-1     |   Timer:StatementExecute=3461581,
+tomee-1     |   Timer:Register=296175,
+tomee-1     |   Timer:RowFetch=102251,
+tomee-1     |   Timer:ObjectBuilding=1645205,
+tomee-1     |   Timer:DescriptorEvents=25133,
+tomee-1     |   time/object=1922225,
+tomee-1     | )
+tomee-1     | }End profile
+tomee-1     | Profile(
+tomee-1     |   total time=5860,
+tomee-1     |   local time=5860,
+tomee-1     |   Timer:DescriptorEvents=5860,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=3002,
+tomee-1     |   local time=3002,
+tomee-1     |   Timer:DescriptorEvents=3002,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2472,
+tomee-1     |   local time=2472,
+tomee-1     |   Timer:DescriptorEvents=2472,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2357,
+tomee-1     |   local time=2357,
+tomee-1     |   Timer:DescriptorEvents=2357,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=2233,
+tomee-1     |   local time=2233,
+tomee-1     |   Timer:DescriptorEvents=2233,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=1981,
+tomee-1     |   local time=1981,
+tomee-1     |   Timer:DescriptorEvents=1981,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=639739,
+tomee-1     |   local time=639739,
+tomee-1     |   Timer:UnitOfWorkCommit=639739,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=811544,
+tomee-1     |   local time=811544,
+tomee-1     |   Timer:TXBeforeCompletion=811544,
+tomee-1     | )
+tomee-1     | Profile(
+tomee-1     |   total time=31194,
+tomee-1     |   local time=31194,
+tomee-1     |   Timer:TXAfterCompletion=31194,
+tomee-1     | )

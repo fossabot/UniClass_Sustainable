@@ -20,6 +20,7 @@ COPY target/UniClass-Dependability.war /usr/local/tomee/webapps/UniClass-Dependa
 COPY .smarttomcat/UniClass-Dependability/conf/context.xml /usr/local/tomee/conf/context.xml
 COPY .smarttomcat/UniClass-Dependability/conf/system.properties /usr/local/tomee/conf/system.properties
 COPY .smarttomcat/UniClass-Dependability/conf/tomee.xml /usr/local/tomee/conf/tomee.xml
+COPY .smarttomcat/UniClass-Dependability/conf/logging.properties /usr/local/tomee/conf/logging.properties
 
 # Utile per mettere in attesa tomEE per l'avvio del dbuniclass. Ottimo se il server non si riavvia automaticamente alla ricerca del driver attivo
 # COPY wait-for-it.sh /wait-for-it.sh

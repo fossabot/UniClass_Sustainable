@@ -7,6 +7,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: dbuniclass
+      POSTGRES_LOG_MIN_DURATION_STATEMENT: 0  # 25ms threshold
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:

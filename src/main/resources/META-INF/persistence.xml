@@ -60,8 +60,15 @@
 
             <!-- Logging -->
             <property name="eclipselink.logging.level" value="FINE"/>
-            <property name="eclipselink.logging.level.sql" value="FINE"/>
             <property name="eclipselink.logging.logger" value="DefaultLogger"/>
+
+
+            <!-- Logging DB con tempi di esecuzione e PROFILER abilita la misurazione dei tempi delle query -->
+            <property name="eclipselink.logging.level.sql" value="FINEST"/>
+            <property name="eclipselink.logging.timestamp" value="true"/>
+            <property name="eclipselink.logging.thread" value="true"/>
+            <property name="eclipselink.logging.connection" value="true"/>
+            <property name="eclipselink.profiler" value="PerformanceProfiler"/> <!-- Misura i tempi delle query. Alterna eventualmente tra PerformanceProfiler e QueryMonitor -->
         </properties>
     </persistence-unit>
 
