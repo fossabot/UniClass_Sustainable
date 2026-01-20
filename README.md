@@ -1,4 +1,6 @@
 # UniClass  
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flucageneroso%2FUniClass_Sustainable.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Flucageneroso%2FUniClass_Sustainable?ref=badge_shield)
+
 
 UniClass è una piattaforma modulare per la gestione dell'ambiente accademico universitario, progettata per fornire servizi come la visione degli orari delle lezioni, la gestione delle aule, e la gestione degli utenti. Il sistema è progettato per essere facilmente estendibile e personalizzabile, offrendo una gestione centralizzata e una facile integrazione con altri strumenti accademici.
 
@@ -59,3 +61,7 @@ docker compose -f docker-compose.prod.yml up
 L'applicazione sarà disponibile su `http://localhost:8080/UniClass-Dependability/`
 
 **Nota importante**: Non usare solo `docker run gssab3/uniclass-dependability:latest` perché manca il database PostgreSQL necessario. Usa sempre `docker-compose.prod.yml` che include sia l'applicazione che il database.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flucageneroso%2FUniClass_Sustainable.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Flucageneroso%2FUniClass_Sustainable?ref=badge_large)
