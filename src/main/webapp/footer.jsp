@@ -13,7 +13,12 @@
                 <br>
                 <a href="Downloadable/privacy-policy.txt" download="privacy-policy.txt">Privacy Policy</a>
                 <br>
-                Developed by: Cetrulo G.Antonio, D'Avanzo Saverio, Gallo Sara, Sabetta Giuseppe</p>
+                Developed by: Cetrulo G.Antonio, D'Avanzo Saverio, Gallo Sara, Sabetta Giuseppe
+            </p>
+            <div class="indexeco-badge" style="text-align:center; margin-top:10px;">
+                <img src="https://indexeco.org/badge" alt="IndexEco Badge">
+            </div>
         </div>
     </div>
 </footer>
+
